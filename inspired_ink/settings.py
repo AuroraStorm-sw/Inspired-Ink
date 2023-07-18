@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-aurorastorm-inspiredink-han0133genl.ws-eu101.gitpod.io',
-    'https://inspired-ink-3acb52d766db.herokuapp.com/',
+    'inspired-ink-3acb52d766db.herokuapp.com',
     'localhost',
 ]
 
