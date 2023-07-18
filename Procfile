@@ -1,0 +1,1 @@
+web: gunicorn inspired_ink.wsgi
