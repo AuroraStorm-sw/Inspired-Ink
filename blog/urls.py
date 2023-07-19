@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('inspired_ink.urls')),
+    #path('', include('inspired_ink.urls')),
 ]
