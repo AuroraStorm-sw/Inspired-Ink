@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from djago.views import generic
+from django.views import generic
 from .models import Post
 
 

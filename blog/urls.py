@@ -2,6 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    #path('', include('inspired_ink.urls')),
+    path('', views.PostList.as_view(), name='home')
 ]
