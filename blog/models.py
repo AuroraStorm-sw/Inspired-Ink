@@ -13,7 +13,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField(
-        'image', default=None) #See if this works
+        'image', blank=True) # Blank=True makes an image optional
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=False)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
