@@ -4,17 +4,38 @@
 <div class="col-sm-8">
     <div class="row">
         {% for post in post_list %}
-        <div class="card">
+
+        <div class="card" style="width: 18rem;">
             <div class="card-body">
-              This is some text within a card body.
+                <h5 class="card-title"> {{ post.title }} </h5>
+                <h6 class="card-subtitle mb-2 text-muted">Created: {{ post.created_on }} </h6>
+                <h6 class="card-subtitle mb-2 text-muted">Updated: {{ post.updated_on }} </h6>
+                <img class="card-img" src=" {{ post.featured_image.url }}">
+                <p class="card-text"> {{ post.content }} </p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
             </div>
-          </div>
+        </div>
+
         {% if forloop.counter|divisibleby:3 %}
     </div>
     <div class="row">
         {% endif %}
         {% endfor %}
     </div>
+    
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 
-{% endblock %}
+    {% endblock %}
