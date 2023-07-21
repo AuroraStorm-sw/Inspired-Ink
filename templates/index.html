@@ -12,7 +12,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">Created: {{ post.created_on }} </h6>
                 <h6 class="card-subtitle mb-2 text-muted">Updated: {{ post.updated_on }} </h6>
                 <img class="card-img" src=" {{ post.featured_image.url }}">
-                <p class="card-text"> {{ post.content }} </p>
+                <p class="card-text"> {{ post.excerpt }} </p>
                 <a href="{% url 'post_detail' post.slug %}" class="card-link">Read full</a>
             </div>
         </div>
