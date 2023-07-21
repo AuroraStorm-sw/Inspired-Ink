@@ -1,7 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Post
 from .forms import FeedbackForm
+
+
+class AddInkPost(CreateView):
+    """
+    A class for authorised users to create and
+    post a post
+    """
+    model = Post
+    template_name = 'add_post.html'
+    fields = '__all__'
 
 
 class PostList(generic.ListView):
