@@ -1,8 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class="container-fluid intro-text">
+    <h1>- Welcome to Inspired Ink -</h1>
+    <br>
+    <p>
+        Inspired Ink is a place for creative writing, where you as an author
+        can share poems and short stories, sharing them with a like-minded
+        people to enjoy. 
+    </p>
+
+    <p>
+        Here, you can get inspired and grow your creative mind by giving and
+        receiving feedback on your work, or simply enjoy a myrriad of creative
+        works from people far and wide.
+    </p>
+
+    <p>
+        Everyone from every step on their journey, from beginners to veterans,
+        are welcome to share their writing by adding more Ink to the webpage.
+    </p>
+
+    <p>
+        If this sounds like a place you'd like to call home, then {% url 'account_signup' %}
+        to start memorializing your creative journey!
+    </p>
+</div>
+
+
+
 <div class="col-sm-8">
-    <div class="row">
+    <div class="row ink-cards">
         {% for post in post_list %}
 
         <div class="card" style="width: 18rem;">
