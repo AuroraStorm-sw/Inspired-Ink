@@ -19,6 +19,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=False)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
 
+
     class Meta:
         ordering = ["-created_on"]
 
@@ -43,3 +44,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.category_name
