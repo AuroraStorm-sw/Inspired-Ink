@@ -1,11 +1,21 @@
 {% extends "base.html" %}
-
-
-
+{% load crispy_forms_tags %}
 {% block content %}
 
+<h2>Add Ink</h2>
 
-<h1>Add Ink</h1>
+<div class="container-fluid intro-text">
+    <div class="row">
+        Here is where you write your new ink!
+    </div>
+</div>
+
+<form method="POST">   
+    {% csrf_token %}
+    {{ form.as_p | safe }}
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+
 {% endblock content %}
 
 
