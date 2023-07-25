@@ -19,6 +19,7 @@ body {
     margin: 5px;
 }
 
+
 /* ---------- Home page ---------- */
 
 
@@ -42,10 +43,12 @@ hr {
     margin-top: 40px;
 }
 
+
 /* ---------- Ink posts ---------- */
 
-
-
+/*Background opacity source:
+https://stackoverflow.com/questions/7241341/can-i-set-an-opacity-only-to-the-background-image-of-a-div
+*/
 
 .ink-cards {
     max-width: 25rem;
@@ -58,7 +61,6 @@ hr {
     transform: translate(0, -5px);
     transition: ease-in-out 400ms;
 }
-
 
 .card-title {
     font-family: 'Inknut Antiqua', serif;

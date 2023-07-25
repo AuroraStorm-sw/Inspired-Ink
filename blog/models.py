@@ -1,7 +1,7 @@
 from django.db import models
-from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.template.defaultfilters import slugify
 
 STATUS = ((0, "Draft"), (1, "Post"))
 
@@ -12,17 +12,15 @@ class Post(models.Model):
     Source from Code Institute:
     https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/blog/models.py#:~:text=class%20Post(,.count()
     """
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    featured_image = CloudinaryField(
-        'image', default=False) # Blank=True makes an image optional
     excerpt = models.TextField(blank=True)
     content = models.TextField()
-    status = models.IntegerField(choices=STATUS, default=False)
+    status = models.IntegerField(choices=STATUS, default=True)
     likes = models.ManyToManyField(
         User, related_name='blog_likes', blank=True)
 
@@ -34,6 +32,14 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+    def save(self, *args, **kwargs):
+        """
+        method to generate slug for posts
+        by non-admin users
+        """
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
 
 
 class Comment(models.Model):
@@ -48,7 +54,7 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
 
     class Meta:
         ordering = ["created_on"]

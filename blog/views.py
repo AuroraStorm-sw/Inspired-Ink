@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Post
 from .forms import FeedbackForm
 
@@ -12,7 +13,8 @@ class AddInkPost(CreateView):
     """
     model = Post
     template_name = 'add_post.html'
-    fields = ('title', 'content', )
+    fields = ('title', 'author', 'content', )
+    success_url = reverse_lazy('home')
 
 
 class PostList(generic.ListView):
