@@ -1,6 +1,17 @@
 body {
-    background-color: aqua;
+    background-color: wheat;
 }
+
+
+/* ---------- Navbar ---------- */
+
+
+.navbar-brand {
+    padding-left: 10px;
+    font-size: 28px;
+}
+
+/* ---------- Ink posts ---------- */
 
 .post-img {
     max-width: 25rem;

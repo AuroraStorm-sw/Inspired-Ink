@@ -11,7 +11,6 @@ class AddInk_form(forms.ModelForm):
         model = Post
         fields = ('title', 'content',)
 
-
 class FeedbackForm(forms.ModelForm):
     """
     Form model that allows authenticated users to

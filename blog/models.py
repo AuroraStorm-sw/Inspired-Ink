@@ -1,19 +1,9 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Post"))
-
-
-class Category(models.Model):
-    """
-    Adds a category field to
-    the blog post
-    """
-    category_name = models.CharField(max_length=80)
-
-    def __str__(self):
-        return self.category_name
 
 
 class Post(models.Model):
@@ -35,9 +25,6 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=False)
     likes = models.ManyToManyField(
         User, related_name='blog_likes', blank=True)
-    category = models.ForeignKey(
-        Category, on_delete=models.PROTECT, default=1)
-
 
     class Meta:
         ordering = ["-created_on"]
