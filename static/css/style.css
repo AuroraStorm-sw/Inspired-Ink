@@ -44,6 +44,33 @@ hr {
 
 /* ---------- Ink posts ---------- */
 
+
+
+
+.ink-cards {
+    max-width: 25rem;
+
+    border: 1px solid;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1690281632/ink1_gbmkhx.jpg")
+}
+
+.ink-cards:hover {
+    transform: translate(0, -5px);
+    transition: ease-in-out 400ms;
+}
+
+
+.card-title {
+    font-family: 'Inknut Antiqua', serif;
+    padding: 5px;
+}
+
+.card-link, h5, p {
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+
+}
+
 .post-img {
     max-width: 25rem;
     max-height: 30rem;
