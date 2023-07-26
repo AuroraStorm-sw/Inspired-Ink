@@ -16,18 +16,37 @@
 <div class="card">
     <div class="row">
         <div class="card-body">
-            <img src="{{ post.featured_image.url }}" class="img-fluid post-img" alt="Responsive image">
             <p class="card-text">
                 {{ post.content | safe }}
             </p>
         </div>
+
         <div class="col-1">
-            <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+            {% if user.is_authenticated %}
+            <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+                <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
+                    <strong><iconify-icon icon="teenyicons:heart-solid"></iconify-icon></strong>
+                </button>
+                {% else %}
+                <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
+                    <strong><iconify-icon icon="teenyicons:heart-outline"></iconify-icon></strong>
+                </button>
+                {% endif %}
+            </form>
+            {% else %}
+                <strong><iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
+            {% endif %}
+            <span>{{ post.number_of_likes }} </span></strong>
         </div>
-        {% with comments.count as total_comments %}
-        <strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>
-        {% endwith %}
+        <div class="col-1">
+            {% with comments.count as total_comments %}
+            <strong><iconify-icon icon="material-symbols:comment"></iconify-icon> {{ total_comments }}</strong>
+            {% endwith %}
+        </div>
     </div>
+
     <div class="row">
         <div class="col">
             <hr>
@@ -51,14 +70,7 @@
             </div>
         </div>
         <div class="col-md-4 card">
-            {% if commented %}
-            <div class="alert alert-success" role="alert">
-                Your comment is awaiting approval
-            </div>
-            {% else %}
-            
             {% if user.is_authenticated %}
-
             <h3>Leave a comment:</h3>
             <p>Posting as: {{ user.username }}</p>
             <form method="post" style="margin-top: 1.3em;">
@@ -67,11 +79,10 @@
                 <button type="submit" class="btn btn-signup btn-lg">Submit</button>
             </form>
             {% endif %}
-            {% endif %}
         </div>
     </div>
 </div>
 
-
+<a role="button" href="{% url 'home' %}">Return</a>
 
 {% endblock content %}

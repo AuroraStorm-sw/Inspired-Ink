@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
-from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import render, get_object_or_404, reverse
+from django.http import HttpResponseRedirect
+from django.views import generic, View
 from django.urls import reverse_lazy
-from .models import Post
 from .forms import FeedbackForm
+from .models import Post
 
 
 class AddInkPost(CreateView):
@@ -75,3 +76,15 @@ class PostDetail(View):
                 "feedback_form": FeedbackForm(),
             },
         )
+
+
+class InkLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
