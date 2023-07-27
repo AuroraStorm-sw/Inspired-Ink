@@ -9,7 +9,7 @@ class AddInk_form(forms.ModelForm):
     """
     class Meta:
         model = Post
-        fields = ('author', 'title', 'content',)
+        fields = ('author', 'title', 'excerpt', 'content',)
 
 
 class FeedbackForm(forms.ModelForm):

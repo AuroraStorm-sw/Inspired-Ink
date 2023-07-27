@@ -6,6 +6,13 @@ from django.template.defaultfilters import slugify
 STATUS = ((0, "Draft"), (1, "Post"))
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     """
     Adds the structure of the Ink (post).
@@ -18,11 +25,12 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts")
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    excerpt = models.TextField(blank=True)
+    excerpt = models.TextField(max_length=200,blank=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=True)
     likes = models.ManyToManyField(
         User, related_name='blog_likes', blank=True)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
 
     class Meta:
         ordering = ["-created_on"]
@@ -61,7 +69,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=80)

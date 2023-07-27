@@ -88,3 +88,15 @@ class InkLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class CategoryListView(generic.ListView):
+    template_name = 'category.html'
+    context_object_name = 'categorylist'
+
+    def get_queryset(self):
+        content = {
+            'cat': self.kwargs['category'],
+            'posts': Post.objects.filter(category__name=self.kwargs['category']),
+        }
+        return content
