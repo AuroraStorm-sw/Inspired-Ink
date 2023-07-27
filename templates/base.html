@@ -7,23 +7,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
 
-    <!-- Iconify-->
+    <!-- ICONIFY-->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-    <!-- Google Fonts-->
+    <!-- GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&family=Montserrat&display=swap"
         rel="stylesheet">
 
-
+    <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>
@@ -35,6 +35,8 @@
 </head>
 
 <body>
+
+    <!-- NAVBAR -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">Inspired Ink <iconify-icon icon="mdi:ink"></iconify-icon></a>
@@ -79,11 +81,35 @@
         </div>
     </nav>
 
+    <!-- ALERT MESSAGES -->
+    
+    <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags}} alert-dismissible fade show" id="alert-msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+
     {% block content %}
 
 
     {% endblock content %}
 
+
+
+    <!-- ALERT MESSAGE TIMEOUT -->
+    <!-- Source: 
+        https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html#:~:text=%3Cscript%3E,%3C/script%3E
+    -->
+    <script>
+        setTimeout(function () {
+            let msg = document.getElementById("alert-msg");
+            let alert = new bootstrap.Alert(msg);
+            alert.close();
+        }, 3000);
+    </script>
 </body>
 
 </html>
