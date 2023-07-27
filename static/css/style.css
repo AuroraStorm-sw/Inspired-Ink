@@ -3,7 +3,7 @@ body {
 }
 
 
-/* ---------- Navbar ---------- */
+/* ---------- NAVBAR ---------- */
 
 
 .navbar-brand {
@@ -20,7 +20,7 @@ body {
 }
 
 
-/* ---------- Home page ---------- */
+/* ---------- HOME PAGE ---------- */
 
 .intro-text h1 {
     margin-top: 30px;
@@ -43,7 +43,7 @@ hr {
 }
 
 
-/* ---------- Ink posts ---------- */
+/* ---------- INK POSTS ---------- */
 
 /*Background opacity source:
 https://stackoverflow.com/questions/7241341/can-i-set-an-opacity-only-to-the-background-image-of-a-div
@@ -79,4 +79,11 @@ https://stackoverflow.com/questions/7241341/can-i-set-an-opacity-only-to-the-bac
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    color: blue;
 }

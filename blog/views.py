@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.urls import reverse_lazy
 from .forms import FeedbackForm
-from .models import Post
+from .models import Post, Category
 
 
 class AddInkPost(CreateView):
@@ -100,3 +100,11 @@ class CategoryListView(generic.ListView):
             'posts': Post.objects.filter(category__name=self.kwargs['category']),
         }
         return content
+
+
+def category_list(request):
+    category_list = Category.objects.exclude(name='uncategorized')
+    context = {
+        "category_list": category_list,
+    }
+    return context
