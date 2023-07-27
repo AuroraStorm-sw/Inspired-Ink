@@ -33,16 +33,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-# X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
     'inspired-ink-3acb52d766db.herokuapp.com',
-    'localhost',
-    '8000-aurorastorm-inspiredink-han0133genl.ws-eu102.gitpod.io'
+    '8000-aurorastorm-inspiredink-han0133genl.ws-eu102.gitpod.io',
 ]
-
-CSRF_TRUSTED_ORIGINS = []
-
 
 # Application definition
 

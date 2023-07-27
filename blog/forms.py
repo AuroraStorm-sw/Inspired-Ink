@@ -2,7 +2,7 @@ from .models import Comment, Post
 from django import forms
 
 
-class AddInk_form(forms.ModelForm):
+class AddInkForm(forms.ModelForm):
     """
     Form model that allows authenticated users to
     write and post posts
@@ -10,6 +10,17 @@ class AddInk_form(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('author', 'title', 'excerpt', 'content',)
+
+
+class EditInkForm(forms.ModelForm):
+    """
+    Form model that allows authenticated users to
+    edit their posts
+    """
+    class Meta:
+        model = Post
+        fields = ('title', 'excerpt', 'content',)
+
 
 
 class FeedbackForm(forms.ModelForm):

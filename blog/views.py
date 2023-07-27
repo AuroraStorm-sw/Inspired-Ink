@@ -3,20 +3,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.urls import reverse_lazy
-from .forms import FeedbackForm
+from .forms import FeedbackForm, AddInkForm, EditInkForm
 from .models import Post, Category
-
-
-class AddInkPost(CreateView):
-    """
-    A class for authorised users to create and
-    post a post
-    """
-    model = Post
-    template_name = 'add_post.html'
-    fields = ('title', 'author', 'content', )
-    success_url = reverse_lazy('home')
-
 
 class PostList(generic.ListView):
     model = Post
@@ -79,7 +67,9 @@ class PostDetail(View):
 
 
 class InkLike(View):
-    
+    """
+    Allows user to like and unlike posts
+    """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -91,6 +81,10 @@ class InkLike(View):
 
 
 class CategoryListView(generic.ListView):
+    """
+    Create a category object for users to 
+    categorize their posts
+    """
     template_name = 'category.html'
     context_object_name = 'categorylist'
 
@@ -103,8 +97,34 @@ class CategoryListView(generic.ListView):
 
 
 def category_list(request):
+    """
+    Creates a list of all available
+    categories to allow user to 
+    browse through them
+    """
     category_list = Category.objects.exclude(name='uncategorized')
     context = {
         "category_list": category_list,
     }
     return context
+
+
+class AddInkPost(CreateView):
+    """
+    A class for authorised users to create and
+    post an Ink post
+    """
+    model = Post
+    template_name = 'add_post.html'
+    form_class = AddInkForm
+    success_url = reverse_lazy('home')
+
+
+class UpdateInkView(UpdateView):
+    """
+    Allows users to update their posts
+    """
+    model = Post
+    template_name = 'update_post.html'
+    form_class = EditInkForm
+    success_url = reverse_lazy('home')
