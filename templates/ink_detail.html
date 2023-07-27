@@ -85,7 +85,8 @@
 
 {% if user.id == post.author.id %}
     <div class="update-btn-group">
-        <a href="{% url 'update' post.slug %}" class="edit-btn" role="button">Edit</a>
+        <a href="{% url 'update_ink' post.slug %}" class="edit-btn" role="button">Edit</a>
+        <a href="{% url 'delete_ink' post.slug %}" class="edit-btn" role="button">Delete</a>
     </div>
 {% endif %}
 

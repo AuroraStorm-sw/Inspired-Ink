@@ -9,7 +9,7 @@ class AddInkForm(forms.ModelForm):
     """
     class Meta:
         model = Post
-        fields = ('author', 'title', 'excerpt', 'content',)
+        fields = ('author', 'title', 'category', 'excerpt', 'content',)
 
 
 class EditInkForm(forms.ModelForm):

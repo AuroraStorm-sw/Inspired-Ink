@@ -12,7 +12,7 @@ Category posts
     <div class="col-12 pb-5"><h1> List of {{categorylist.cat}} posts</h1></div>
     {% for post in categorylist.posts %}
         <div class="col-md-4">
-        <a href="{% url 'post_detail' post.slug %}" class="card-link">
+        <a href="{% url 'ink_detail' post.slug %}" class="card-link">
           <div class="card mb-4 box-shadow">
             <div class="card-body">
               <h2 style="font-size:18px;font-weight:bold">{{post.title|truncatechars:50}}</h2>

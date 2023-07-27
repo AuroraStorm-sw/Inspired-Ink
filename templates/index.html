@@ -33,7 +33,7 @@
     <div class="row d-flex justify-content-around">
                 {% for post in post_list %}
                 <div class="col-md-5 p-3 m-3 ink-cards">
-                    <a href="{% url 'post_detail' post.slug %}" class="card-link">
+                    <a href="{% url 'ink_detail' post.slug %}" class="card-link">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}

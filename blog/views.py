@@ -24,7 +24,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "ink_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -55,7 +55,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "ink_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -77,7 +77,7 @@ class InkLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('ink_detail', args=[slug]))
 
 
 class CategoryListView(generic.ListView):
@@ -115,16 +115,25 @@ class AddInkPost(CreateView):
     post an Ink post
     """
     model = Post
-    template_name = 'add_post.html'
+    template_name = 'add_ink.html'
     form_class = AddInkForm
     success_url = reverse_lazy('home')
 
 
 class UpdateInkView(UpdateView):
     """
-    Allows users to update their posts
+    Allows users to edit their posts
     """
     model = Post
-    template_name = 'update_post.html'
+    template_name = 'ink_update.html'
     form_class = EditInkForm
+    success_url = reverse_lazy('home')
+
+
+class DeleteInkView(DeleteView):
+    """
+    Allows users to delete their posts
+    """
+    model = Post
+    template_name = 'ink_delete.html'
     success_url = reverse_lazy('home')

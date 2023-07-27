@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
     'inspired-ink-3acb52d766db.herokuapp.com',

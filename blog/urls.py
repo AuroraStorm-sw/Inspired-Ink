@@ -6,7 +6,7 @@ urlpatterns = [
     path('category/<category>/', views.CategoryListView.as_view(), name='category'),
     path('new_ink/', views.AddInkPost.as_view(), name='create_ink'),
     path('like/<slug:slug>', views.InkLike.as_view(), name='inkpost_like'),
-    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
-    path('update/<slug:slug>', views.UpdateInkView.as_view(), name='update'),
-    
+    path('<slug:slug>/', views.PostDetail.as_view(), name='ink_detail'),
+    path('update/<slug:slug>', views.UpdateInkView.as_view(), name='update_ink'),
+    path('delete/<slug:slug>', views.DeleteInkView.as_view(), name='delete_ink'),   
 ]
