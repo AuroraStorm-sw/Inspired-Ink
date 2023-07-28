@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from .forms import FeedbackForm, AddInkForm, EditInkForm
 from .models import Post, Category
 
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -82,7 +83,7 @@ class InkLike(View):
 
 class CategoryListView(generic.ListView):
     """
-    Create a category object for users to 
+    Create a category object for users to
     categorize their posts
     """
     template_name = 'category.html'
@@ -91,7 +92,8 @@ class CategoryListView(generic.ListView):
     def get_queryset(self):
         content = {
             'cat': self.kwargs['category'],
-            'posts': Post.objects.filter(category__name=self.kwargs['category']),
+            'posts': Post.objects.filter(
+                category__name=self.kwargs['category']),
         }
         return content
 
@@ -99,7 +101,7 @@ class CategoryListView(generic.ListView):
 def category_list(request):
     """
     Creates a list of all available
-    categories to allow user to 
+    categories to allow user to
     browse through them
     """
     category_list = Category.objects.exclude(name='uncategorized')
