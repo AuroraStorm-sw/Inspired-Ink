@@ -4,7 +4,6 @@ body {
     margin: 0;
 }
 
-
 /* ---------- NAVBAR ---------- */
 
 
@@ -24,29 +23,46 @@ body {
 
 /* ---------- HOME PAGE ---------- */
 
+.wrapper {
+    max-width: 60rem;
+}
+
+.quote-card {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.quote-body {
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1690281374/ink_xo84iq.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .intro-text h1 {
     margin-top: 30px;
 }
 
-.nav-link {
-    text-decoration: underline;
+.intro-text a {
+    font-family: 'Inknut Antiqua', serif;
+    color: black;
+}
+
+.intro-text a:hover {
+    color: rgb(119, 70, 5);
 }
 
 .intro-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
-
     text-align: center;
 
     max-width: 60rem;
-
     margin-bottom: 40px;
 }
 
 hr {
     margin-top: 40px;
 }
-
 
 /* ---------- INK POSTS ---------- */
 
@@ -89,6 +105,8 @@ https://stackoverflow.com/questions/7241341/can-i-set-an-opacity-only-to-the-bac
 
 /* ---------- FOOTER ---------- */
 
-footer {
-    
+.footer-link {
+    font-size: 3rem;
+    margin: 20px 0 10px 40px;
+    color: black;
 }

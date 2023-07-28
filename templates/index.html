@@ -6,15 +6,17 @@
 <!-- QUOTE -->
 
 <div class="container quote-card">
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
         <div class="card col-8 quote-card">
             <div class="card-header">
                 Quote
             </div>
-            <div class="card-body">
+            <div class="card-body quote-body">
                 <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
+                    <p>“Write what disturbs you, what you fear, what you have not been willing to speak about. Be
+                        willing to be split open.”</p>
+                    <footer class="blockquote-footer">Natalie Goldberg <cite title="Source Title">Writing Down the
+                            Bones: Freeing the Writer Within</cite>
                     </footer>
                 </blockquote>
             </div>
@@ -24,57 +26,62 @@
 
 <!-- INTRODUCTION -->
 
-<div class="container-fluid intro-text">
-    <h1>- Welcome to Inspired Ink -</h1>
-    <br>
-    <p>
-        Inspired Ink is a place for creative writing, where you as an author
-        can share poems and short stories, sharing them with a like-minded
-        people to enjoy.
-    </p>
-
-    <p>
-        Here, you can get inspired and grow your creative mind by giving and
-        receiving feedback on your work, or simply enjoy a myrriad of creative
-        works from people far and wide.
-    </p>
-
-    <p>
-        Everyone from every step on their journey, from beginners to veterans,
-        are welcome to share their writing by adding more Ink to the webpage.
-    </p>
-
-    <p>
-        If this sounds like a place you'd like to call home, then 
-        <a class="nav-link" href="{% url 'account_signup' %}">Create an account</a>
-        to start memorializing your creative journey!
-    </p>
+<div class="wrapper container-fluid ">
     <hr>
-</div>
+    <div class="row intro-text">
 
+        <h1>- Welcome to Inspired Ink -</h1>
+        <br>
+        <p>
+            Inspired Ink is a place for creative writing, where you as an author
+            can share poems and short stories, sharing them with a like-minded
+            people to enjoy.
+        </p>
 
-<!-- POSTED INKS-->
+        <p>
+            Here, you can get inspired and grow your creative mind by giving and
+            receiving feedback on your work, or simply enjoy a myrriad of creative
+            works from people far and wide.
+        </p>
 
-<div class="container-fluid">
-    <div class="row d-flex justify-content-around">
-        {% for post in post_list %}
-        <div class="col-md-5 p-3 m-3 ink-cards">
-            <a href="{% url 'ink_detail' post.slug %}" class="card-link">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
-                    </h5>
-                    <h5>Written by: {{ post.author }} </h5>
-                    <h5>Created: {{ post.created_on }} </h5>
-                    <p> {{ post.excerpt }} </p>
-            </a>
-        </div>
+        <p>
+            Everyone from every step on their journey, from beginners to veterans,
+            are welcome to share their writing by adding more Ink to the webpage.
+        </p>
+
+        <p>
+            If this sounds like a place you'd like to call home, then
+            <br>
+            <a href="{% url 'account_signup' %}">Create an account</a>
+            <br>
+            to start memorializing your creative journey!
+        </p>
     </div>
-    {% if forloop.counter|divisibleby:6 %}
-</div>
-<div class="row ink-cards-row">
-    {% endif %}
-    {% endfor %}
+    <hr>
+
+    <!-- POSTED INKS-->
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-around">
+            {% for post in post_list %}
+            <div class="col-md-5 p-3 m-3 ink-cards">
+                <a href="{% url 'ink_detail' post.slug %}" class="card-link">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
+                        </h5>
+                        <h5>Written by: {{ post.author }} </h5>
+                        <h5>Created: {{ post.created_on }} </h5>
+                        <p> {{ post.excerpt }} </p>
+                </a>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:6 %}
+    </div>
+    <div class="row ink-cards-row">
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
 <!-- PAGINATION -->
 {% if is_paginated %}
