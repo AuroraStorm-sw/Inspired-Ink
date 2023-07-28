@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(49, 34, 6);
+    background-color: wheat;
     padding: 0;
     margin: 0;
 }
@@ -28,6 +28,9 @@ body {
     margin-top: 30px;
 }
 
+.nav-link {
+    text-decoration: underline;
+}
 
 .intro-text {
     font-family: 'Montserrat', sans-serif;
@@ -87,5 +90,5 @@ https://stackoverflow.com/questions/7241341/can-i-set-an-opacity-only-to-the-bac
 /* ---------- FOOTER ---------- */
 
 footer {
-    color: blue;
+    
 }
