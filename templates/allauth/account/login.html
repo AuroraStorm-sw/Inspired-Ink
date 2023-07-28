@@ -3,21 +3,17 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}
-{% trans "Sign In" %}
-{% endblock %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 
-<div class="conrainer">
+<div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-3">
 
       <h1>{% trans "Sign In" %}</h1>
 
       <p>{% blocktrans %}
-        Welcome to Inspired Ink, a place for your creative beauty to flourish!
-        <br> 
         If you have not created an account yet, then please
         <a href="{{ signup_url }}">sign up</a> first.
         {% endblocktrans %}</p>
