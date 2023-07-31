@@ -1,6 +1,3 @@
-Bugs: Lingering 'missing data' in category table after migrating the category model and category addition to Post without creating a category index, had to reset the database to remove the error and recreate superuser
-
-
 # Strategy
 ## Who is the user?
 
@@ -33,6 +30,10 @@ For the site to reach its full potential for a user, these features are included
 ## Frameworks/Libraries
 
 # Testing
+
+# Bugs
+- Lingering 'missing data' in category table after migrating the category model and category addition to Post without creating a category index, had to reset the database to remove the error and recreate superuser
+
 
 # Deployment
 

@@ -25,7 +25,7 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts")
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    excerpt = models.TextField(max_length=200,blank=True)
+    excerpt = models.TextField(max_length=100,blank=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=True)
     likes = models.ManyToManyField(

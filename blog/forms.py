@@ -11,6 +11,12 @@ class AddInkForm(forms.ModelForm):
         model = Post
         fields = ('author', 'title', 'category', 'excerpt', 'content',)
 
+        widgets = {
+            'excerpt':  forms.Textarea(
+                attrs={'placeholder': 'Write a short description'})
+
+        }
+
 
 class EditInkForm(forms.ModelForm):
     """

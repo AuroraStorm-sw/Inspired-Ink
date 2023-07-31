@@ -20,10 +20,12 @@
     <!-- GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&family=Montserrat&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
 
     <title>
         {% block title %}
@@ -36,7 +38,7 @@
 <body>
 
     <!-- NAVBAR -->
-
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">Inspired Ink <iconify-icon icon="mdi:ink"></iconify-icon></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -72,7 +74,9 @@
             </ul>
         </div>
     </nav>
+
     <!-- ALERT MESSAGES -->
+
     <div class="col-md-8 offset-md-2">
         {% for message in messages %}
         <div class="alert {{ message.tags}} alert-dismissible fade show" id="alert-msg" role="alert">
@@ -87,24 +91,25 @@
 
     {% endblock content %}
 
+    <!-- FOOTER -->
 
-    <footer class="container-fluid justify-content-center d-flex">
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
-                aria-label="Twitter">
-                <iconify-icon icon="mdi:twitter"></iconify-icon>
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
-                aria-label="Facebook">
-                <iconify-icon icon="mdi:facebook"></iconify-icon>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
-                aria-label="Instagram">
-                <iconify-icon icon="mdi:instagram"></iconify-icon>
-            </a>
-            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
-                aria-label="Instagram">
-                <iconify-icon icon="mdi:pinterest"></iconify-icon>
-            </a>
+    <footer class="footer container-fluid d-flex justify-content-center">
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
+            aria-label="Twitter">
+            <iconify-icon icon="mdi:twitter"></iconify-icon>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
+            aria-label="Facebook">
+            <iconify-icon icon="mdi:facebook"></iconify-icon>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
+            aria-label="Instagram">
+            <iconify-icon icon="mdi:instagram"></iconify-icon>
+        </a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="footer-link"
+            aria-label="Instagram">
+            <iconify-icon icon="mdi:pinterest"></iconify-icon>
+        </a>
     </footer>
 
     <!-- ALERT MESSAGE TIMEOUT -->

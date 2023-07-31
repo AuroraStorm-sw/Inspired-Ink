@@ -6,26 +6,45 @@ Category posts
 
 {% block content %}
 
-   <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-    <div class="col-12 pb-5"><h1> List of {{categorylist.cat}} posts</h1></div>
+<div class="container-fluid">
+  <div class="row d-flex justify-content-around">
+    <h1 class="category-text">List of {{categorylist.cat}} posts</h1>
     {% for post in categorylist.posts %}
-        <div class="col-md-4">
-        <a href="{% url 'ink_detail' post.slug %}" class="card-link">
-          <div class="card mb-4 box-shadow">
-            <div class="card-body">
-              <h2 style="font-size:18px;font-weight:bold">{{post.title|truncatechars:50}}</h2>
-              <p class="card-text">{{post.excerpt|truncatechars:50}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-              </div>
-            </div>
-          </div>
-          </a>
-        </div>
-    {% endfor %}
-      </div>
+    <div class="col-md-5 p-3 m-4 ink-cards">
+      <a href="{% url 'ink_detail' post.slug %}" class="card-link">
+        <div class="card-body">
+          <h5 class="card-title">
+            <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
+          </h5>
+          <h5>Written by: {{ post.author }} </h5>
+          <h5>Created: {{ post.created_on }} </h5>
+          <p> {{ post.excerpt }} </p>
+      </a>
     </div>
   </div>
+  {% if forloop.counter|divisibleby:6 %}
+</div>
 
+<div class="row ink-cards-row">
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+<button type="button" class="btn"><a href="{% url 'home' %}" role="button"
+    class="cancel-btn">Back</a></button>
+
+<!-- PAGINATION -->
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
 {% endblock %}
