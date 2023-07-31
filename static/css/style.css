@@ -1,16 +1,29 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
 body {
+    display: flex;
+    flex-direction: column;    
+    
+    margin: 0px;
+    min-height: 100vh;
     width: 100vw;
+
+    position: relative;
+}
+
+.background-img {
     min-height: 100vh;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1690788745/parchment.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1690788745/parchment.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-
-    padding: 0;
-    margin: 0;
-
-    display: flex;
-    flex-direction: column;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1 {
@@ -135,7 +148,12 @@ p {
 .footer {
     height: 4rem;
     width: 100%;
-    border: 2px solid black;
+    border: 1px solid rgb(119, 70, 5);
+    background-color: #b96e46;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-link {
