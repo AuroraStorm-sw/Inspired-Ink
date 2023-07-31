@@ -52,37 +52,44 @@
         <p>
             If this sounds like a place you'd like to call home, then
             <br>
-            <a href="{% url 'account_signup' %}">Create an account</a>
+            <a href="{% url 'account_signup' %}"><small>
+                    <iconify-icon icon="mdi:ink">
+                </small>
+                Create an account
+                <small>
+                    <iconify-icon icon="mdi:ink"></iconify-icon></a></small>
             <br>
             to start memorializing your creative journey!
         </p>
     </div>
     <hr>
 </div>
-    <!-- POSTED INKS-->
+<!-- POSTED INKS-->
 
-    <div class="container-fluid">
-        <div class="row d-flex justify-content-around">
-            {% for post in post_list %}
-            <div class="col-md-5 p-3 m-4 ink-cards">
-                <a href="{% url 'ink_detail' post.slug %}" class="card-link">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
-                        </h5>
-                        <h5>Written by: {{ post.author }} </h5>
-                        <h5>Created: {{ post.created_on }} </h5>
-                        <p><iconify-icon icon="teenyicons:heart-solid"></iconify-icon> {{ post.number_of_likes }}</p>
-                        <p> {{ post.excerpt }} </p>
-                </a>
-            </div>
+<div class="container-fluid">
+    <div class="row d-flex justify-content-around">
+        {% for post in post_list %}
+        <div class="col-md-5 p-3 m-4 ink-cards">
+            <a href="{% url 'ink_detail' post.slug %}" class="card-link">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
+                    </h5>
+                    <h5>Written by: {{ post.author }} </h5>
+                    <h5>Created: {{ post.created_on }} </h5>
+                    <p>
+                        <iconify-icon icon="teenyicons:heart-solid"></iconify-icon> {{ post.number_of_likes }}
+                    </p>
+                    <p> {{ post.excerpt }} </p>
+            </a>
         </div>
-        {% if forloop.counter|divisibleby:6 %}
     </div>
-    <div class="row ink-cards-row">
-        {% endif %}
-        {% endfor %}
-    </div>
+    {% if forloop.counter|divisibleby:6 %}
+</div>
+<div class="row ink-cards-row">
+    {% endif %}
+    {% endfor %}
+</div>
 <!-- PAGINATION -->
 {% if is_paginated %}
 <nav aria-label="Page navigation">

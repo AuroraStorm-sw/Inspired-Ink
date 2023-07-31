@@ -9,7 +9,7 @@ class AddInkForm(forms.ModelForm):
     """
     class Meta:
         model = Post
-        fields = ('author', 'title', 'category', 'excerpt', 'content',)
+        fields = ('author', 'category', 'title', 'excerpt', 'content',)
 
         widgets = {
             'excerpt':  forms.Textarea(

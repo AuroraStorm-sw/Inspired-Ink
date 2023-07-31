@@ -33,12 +33,24 @@ h1 {
 h2, h6 {
     font-family: 'Inknut Antiqua', serif;
     text-align: center;
+
+    margin-top: 2rem;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
 
+}
+
+a {
+    font-family: 'Inknut Antiqua', serif;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(119, 70, 5);
 }
 
 /* ---------- NAVBAR ---------- */
@@ -56,6 +68,10 @@ p {
     margin: 5px;
 }
 
+.navbar-toggler-icon,
+.navbar-toggler {
+    padding-right: 1rem;
+}
 
 /* ---------- HOME PAGE ---------- */
 
@@ -77,15 +93,6 @@ p {
 
 .intro-text h1 {
     margin-top: 30px;
-}
-
-.intro-text a {
-    font-family: 'Inknut Antiqua', serif;
-    color: black;
-}
-
-.intro-text a:hover {
-    color: rgb(119, 70, 5);
 }
 
 .intro-text {
@@ -188,24 +195,32 @@ p {
     margin-bottom: 2rem;
 }
 
+input[type=text], 
+select, 
+textarea{
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+    /*Source:
+    https://stackoverflow.com/questions/5235142/
+    */
+   resize: none;
+
+}
+
+form {
+    padding-bottom: 3rem;
+}
+
 .form-group {
     font-family: 'Roboto', sans-serif;
 
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
+    box-sizing: border-box;
 }
 
 .form-group>p {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-label,
-select {
-    text-align: center;
-    padding-right: 10px;
+    display: block;
 }
 
 .page-link {
@@ -226,16 +241,6 @@ select {
 }
 
 
-/*Source:
-https://stackoverflow.com/questions/5235142/
-*/
-
-textarea {
-    resize: none;
-    min-width: 30rem;
-  }
-
-
   /* ---------- CATEGORIES ---------- */
 
 .category-text {
@@ -246,24 +251,20 @@ textarea {
   /* ---------- BUTTONS ---------- */
 
 .btn {
+    font-family: 'Inknut Antiqua', serif;
     font-size: 18px;
-    border: none;
+    color: #000;
     background-color: #b96e46;
+    border: none;
+}
+
+.auth-btn a {
+    color: #bebcbc;
 }
 
 .btn:hover {
     background-color: rgb(119, 70, 5);
-}
-
-.btn-primary{
     color: #fff;
-    text-decoration: none;
-}
-
-.cancel-btn,
-.delete-btn {
-    color: #bebcbc;
-    text-decoration: none;
 }
 
 .btn-like {
