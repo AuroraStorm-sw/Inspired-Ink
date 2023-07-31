@@ -5,21 +5,21 @@
 
 {% block content %}
 
-<h2>Add Ink</h2>
 
-<div class="container-fluid intro-text">
-    <div class="row">
-        Here is where you write your new ink!
+<div class="container-fluid">
+    <div class="row add-ink-text">
+        <h2>Add Ink</h2>
+        <p>Here is where you write your new ink!</p>
     </div>
 </div>
 
-<form method="POST">   
+<form class="form-group create-ink-form" method="POST">   
     {% csrf_token %}
     {{ form.as_p | safe }}
     <button type="submit" class="submit-btn">Submit</button>
-</form>
-<a href="{% url 'home' %}" role="button" class="cancel-btn">Cancel</a>
+    <button type="submit" class="submit-btn"><a href="{% url 'home' %}" role="button" class="cancel-btn">Cancel</a></button>
 
+</form>
 {% endblock content %}
 
 

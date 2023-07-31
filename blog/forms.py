@@ -22,7 +22,6 @@ class EditInkForm(forms.ModelForm):
         fields = ('title', 'excerpt', 'content',)
 
 
-
 class FeedbackForm(forms.ModelForm):
     """
     Form model that allows authenticated users to
