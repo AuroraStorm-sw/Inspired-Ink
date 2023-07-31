@@ -4,76 +4,89 @@
 
 {% load crispy_forms_tags %}
 
-<div class="card-wrapper">
+<div class="card-wrapper offset-md-2">
     <div class="card border-secondary mb-3">
         <div class="card-header">
             <h1>{{ post.title }}</h1>
         </div>
         <div class="card-body text-secondary">
             <h5 class="card-title">{{ post.author }} | {{ post.created_on}}</h5>
+            <!--Source scrollbar: 
+                https://stackoverflow.com/questions/2836827-->
             <div class="ink-body" style="overflow-y:scroll;">
-                <p class="card-text ink-body">{{ post.content | safe }}</p>
+
+                <!--Source add linebreaks:
+            https://code-institute-room.slack.com/archives/C8N285L9H/p1521104005000292-->
+                <p class="card-text ink-body">{{ post.content | linebreaksbr | safe }}</p>
             </div>
+        </div>
+    </div>
+    {% if user.id == post.author.id %}
+    <div class="update-btn-group">
+        <a href="{% url 'update_ink' post.slug %}" class="btn edit-btn" role="button">Edit</a>
+        <a href="{% url 'delete_ink' post.slug %}" class="btn delete-btn" role="button">Delete</a>
+    </div>
+    {% endif %}
+</div>
+
+<!-- LIKES AND COMNMENTS SYMBOLS -->
+
+<div class="like-comment-wrap">
+    {% if user.is_authenticated %}
+    <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% if liked %}
+        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
+            <iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
+        </button>
+        {% else %}
+        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
+            <iconify-icon icon="teenyicons:heart-outline"></iconify-icon>
+        </button>
+        {% endif %}
+    </form>
+    {% else %}
+    <iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
+    {% endif %}
+    <span>{{ post.number_of_likes }} </span>
+
+    {% with comments.count as total_comments %}
+    <iconify-icon icon="material-symbols:comment" class="btn-like"></iconify-icon> {{ total_comments }}
+    {% endwith %}
+</div>
+
+
+<div class="row">
+    <div class="col-8">
+        <div class="card comment-card border-light mb-3">
+            {% for comment in comments %}
+            <div class="card-header">{{ comment.name }}</div>
+            <div class="card-body comment-body">
+                <h5 class="card-title">{{ comment.created_on }}</h5>
+                <p class="card-text">{{ comment.body | linebreaks }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">Leave feedback:</div>
+            {% if user.is_authenticated %}
+            <p>{{ user.username }}</p>
+            <form method="post">
+                {{ feedback_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% endif %}
         </div>
     </div>
 </div>
 
 
-
-
-
-<br>
-<br>
-
-{% if user.is_authenticated %}
-<form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
-    {% csrf_token %}
-    {% if liked %}
-    <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
-        <iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
-    </button>
-    {% else %}
-    <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
-        <iconify-icon icon="teenyicons:heart-outline"></iconify-icon>
-    </button>
-    {% endif %}
-</form>
-{% else %}
-<iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
-{% endif %}
-<span>{{ post.number_of_likes }} </span>
-
-<br>
-<br>
-
-
-
-{% for comment in comments %}
-{{ comment.name }}
-{{ comment.created_on }}
-{{ comment.body | linebreaks }}
-{% endfor %}
-
-
-
-{% if user.is_authenticated %}
-Leave a comment:
-<p>Posting as: {{ user.username }}</p>
-<form method="post">
-    {{ feedback_form | crispy }}
-    {% csrf_token %}
-    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-</form>
-{% endif %}
-{% if user.id == post.author.id %}
-<div class="update-btn-group">
-    <a href="{% url 'update_ink' post.slug %}" class="btn edit-btn" role="button">Edit</a>
-    <a href="{% url 'delete_ink' post.slug %}" class="btn edit-btn" role="button">Delete</a>
-</div>
-{% endif %}
-
-
-<a href="{% url 'home' %}" class="btn edit-btn" role="button">Return</a>
 
 
 

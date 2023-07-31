@@ -4,20 +4,22 @@
 
 {% block content %}
 
-<h2>Are you sure you want to delete your Ink? <br>
-The decision is final.</h2> <br> 
+<h2 class="m-4">Are you sure you want to delete your Ink? <br>
+    The decision is final.</h2> <br>
 
 <!-- Delete posted Ink for the author who
 wrote it, ensuring no one else can delete other's
 Inks -->
 {% if user.id == post.author.id %}
-    <form method="POST">
-        {% csrf_token %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="button-wrap">
         <div class="update-btn-group">
-            <button type="submit" class="delete-btn">Delete Ink</button>
-            <a href="{% url 'home' %}" role="button" class="cancel-btn">Cancel</a>
+            <button type="submit" class="btn delete-btn">Yes, my decision is final.</button>
+            <a href="{% url 'home' %}" class="btn edit-btn" role="button">No, I have regrets!</a>
         </div>
-    </form>
+    </div>
+</form>
 {% endif %}
 
 {% endblock %}

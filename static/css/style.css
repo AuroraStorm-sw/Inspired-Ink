@@ -17,14 +17,14 @@ h1 {
     font-family: 'Inknut Antiqua', serif;
 }
 
-h2 {
+h2, h6 {
     font-family: 'Inknut Antiqua', serif;
     text-align: center;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
 
 }
 
@@ -48,13 +48,11 @@ p {
 
 .wrapper {
     max-width: 70vw;
-    margin-top: 20px;
     padding-bottom: 20px;
 
 }
 
 .quote-card {
-    margin-top: 2rem;
     padding: 5px;
 }
 
@@ -82,9 +80,6 @@ p {
     text-align: center;
 }
 
-hr {
-    margin-top: 40px;
-}
 
 /* ---------- INK POSTS ---------- */
 
@@ -162,6 +157,11 @@ p {
     max-height: 30rem;
 }
 
+.like-comment-wrap {
+    display: inline;
+    padding: 10px;
+}
+
 /* ---------- INK AND FEEDBACK FORM STYLING ---------- */
 
 .add-ink-text {
@@ -198,6 +198,14 @@ select {
     max-height: 10rem;
 }
 
+#id_body {
+    min-width: 60rem;
+
+}
+
+.comment-body {
+    width: 100%;
+}
 
 
 /*Source:
@@ -206,6 +214,7 @@ https://stackoverflow.com/questions/5235142/
 
 textarea {
     resize: none;
+    min-width: 30rem;
   }
 
 
@@ -221,11 +230,11 @@ textarea {
 .btn {
     font-size: 18px;
     border: none;
-    background-color: rgb(119, 70, 5);
+    background-color: #b96e46;
 }
 
 .btn:hover {
-    background-color: #b96e46;
+    background-color: rgb(119, 70, 5);
 }
 
 .btn-primary{
@@ -233,7 +242,34 @@ textarea {
     text-decoration: none;
 }
 
-.cancel-btn {
+.cancel-btn,
+.delete-btn {
     color: #bebcbc;
     text-decoration: none;
+}
+
+.btn-like {
+    font-size: 20px;
+}
+
+.button-wrap {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+
+/* ---------- MISC ---------- */
+
+
+/*A required field in the Feedback body was
+visible, showing Body* 
+I couldn't find where this text came from, so
+decided to visibly hide it*/
+.requiredField {
+    font-size: 0;
+}
+
+.alert {
+    text-align: center;
 }

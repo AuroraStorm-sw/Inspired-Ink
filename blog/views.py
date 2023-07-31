@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.urls import reverse_lazy
+from django.contrib import messages
 from .forms import FeedbackForm, AddInkForm, EditInkForm
 from .models import Post, Category
 
@@ -121,6 +122,17 @@ class AddInkPost(CreateView):
     form_class = AddInkForm
     success_url = reverse_lazy('home')
 
+    def form_valid(self, form):
+        """
+        Source:
+        https://stackoverflow.com/questions/67366138
+        Displays an alert that the Ink has
+        been successfully posted
+        """
+        msg = 'Your Ink has been shared with the world!'
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(CreateView, self).form_valid(form)
+
 
 class UpdateInkView(UpdateView):
     """
@@ -131,6 +143,17 @@ class UpdateInkView(UpdateView):
     form_class = EditInkForm
     success_url = reverse_lazy('home')
 
+    def form_valid(self, form):
+        """
+        Source:
+        https://stackoverflow.com/questions/67366138
+        Displays an alert that the Ink has
+        been successfully edited
+        """
+        msg = 'Your Ink has been successfully edited!'
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(UpdateView, self).form_valid(form)
+
 
 class DeleteInkView(DeleteView):
     """
@@ -139,3 +162,16 @@ class DeleteInkView(DeleteView):
     model = Post
     template_name = 'ink_delete.html'
     success_url = reverse_lazy('home')
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Source:
+        https://stackoverflow.com/questions/24822509
+        Displays an alert that the Ink has
+        been successfully deleted
+        """
+        msg = 'Your Ink has been delivered to the void.'
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(DeleteView, self).delete(request, *args, **kwargs)
+
+
