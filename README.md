@@ -29,11 +29,20 @@ For the site to reach its full potential for a user, these features are included
 ## Django packages
 ## Frameworks/Libraries
 
+# Credits
+- https://ozofe.com/sappho/to-atthis-the-inconstant/ - Poem by Sappho
+- https://ozofe.com/maya-angelou/on-aging/ - Poem by Maya Angelou
+
 # Testing
+## Manual testing
+
 
 # Bugs
-- Lingering 'missing data' in category table after migrating the category model and category addition to Post without creating a category index, had to reset the database to remove the error and recreate superuser
+1. Lingering 'missing data' in category table after migrating the category model and category addition to Post without creating a category index.
+Solution: Reset the database to remove the error and recreate superuser.
 
+2. Static files not loading on Heroku.
+Solution:
 
 # Deployment
 

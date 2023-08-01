@@ -1,14 +1,12 @@
 html {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
+    overflow: auto;
  }
  
 body {
     display: flex;
     flex-direction: column;    
     
-    margin: 0px;
+    margin: 0 auto;
     min-height: 100vh;
     width: 100vw;
 
@@ -30,7 +28,7 @@ h1 {
     font-family: 'Inknut Antiqua', serif;
 }
 
-h2, h6 {
+h2 {
     font-family: 'Inknut Antiqua', serif;
     text-align: center;
 
@@ -40,7 +38,6 @@ h2, h6 {
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-
 }
 
 a {
@@ -262,6 +259,10 @@ form {
     background-color: #b96e46;
     border: none;
 }
+
+.auth-btn {
+    color: #bebcbc;
+} 
 
 .auth-btn a {
     color: #bebcbc;
