@@ -188,6 +188,10 @@ https://stackoverflow.com/questions/7241341
     padding: 10px;
 }
 
+.comment-wrap {
+    margin-left: 5rem;
+}
+
 /* ---------- INK AND FEEDBACK FORM STYLING ---------- */
 
 .add-ink-text {
