@@ -30,8 +30,11 @@ For the site to reach its full potential for a user, these features are included
 ## Frameworks/Libraries
 
 # Credits
+## Sources for example posts
 - https://ozofe.com/sappho/to-atthis-the-inconstant/ - Poem by Sappho
 - https://ozofe.com/maya-angelou/on-aging/ - Poem by Maya Angelou
+- https://reedsy.com/discovery/blog/haiku-poem-examples - Haiku by Ezra Pound
+- https://www.songlyrics.com/poets-of-the-fall/war-lyrics/ - Part of the lyrics to War by Poets Of the Fall
 
 # Testing
 ## Manual testing

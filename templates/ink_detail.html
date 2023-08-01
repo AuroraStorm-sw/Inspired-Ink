@@ -13,11 +13,11 @@
             <h5 class="card-title">{{ post.author }} | {{ post.created_on}}</h5>
             <!--Source scrollbar: 
                 https://stackoverflow.com/questions/2836827-->
-            <div class="ink-body" style="overflow-y:scroll;">
+            <div style="overflow-y:scroll;">
 
                 <!--Source add linebreaks:
             https://code-institute-room.slack.com/archives/C8N285L9H/p1521104005000292-->
-                <p class="card-text ink-body">{{ post.content | linebreaksbr | safe }}</p>
+                <p class="card-text ink-content">{{ post.content | linebreaksbr | safe }}</p>
             </div>
         </div>
     </div>
@@ -56,100 +56,11 @@
 </div>
 
 
-<div class="row">
-    <div class="col-8">
-        <div class="card comment-card border-light mb-3">
-            {% for comment in comments %}
-            <div class="card-header">{{ comment.name }}</div>
-            <div class="card-body comment-body">
-                <h5 class="card-title">{{ comment.created_on }}</h5>
-                <p class="card-text">{{ comment.body | linebreaks }}</p>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">Leave feedback:</div>
-            {% if user.is_authenticated %}
-            <p>{{ user.username }}</p>
-            <form method="post">
-                {{ feedback_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% endif %}
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="container">
-    <div class="row ink-title">
-        <h1>{{ post.title }}</h1>
-    </div>
+<div class="container-fluid">
     <div class="row">
-        <p>{{ post.author }} | {{ post.created_on}}</p>
-    </div>
-</div>
-
-<div class="card">
-    <div class="row">
-        <div class="card-body">
-            <p class="card-text ink-view-card">
-                {{ post.content | safe }}
-            </p>
-        </div>
-
-        <div class="col-1">
-            {% if user.is_authenticated %}
-            <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
-                {% csrf_token %}
-                {% if liked %}
-                <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
-                    <strong><iconify-icon icon="teenyicons:heart-solid"></iconify-icon></strong>
-                </button>
-                {% else %}
-                <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
-                    <strong><iconify-icon icon="teenyicons:heart-outline"></iconify-icon></strong>
-                </button>
-                {% endif %}
-            </form>
-            {% else %}
-                <strong><iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
-            {% endif %}
-            <span>{{ post.number_of_likes }} </span></strong>
-        </div>
-        <div class="col-1">
-            {% with comments.count as total_comments %}
-            <strong><iconify-icon icon="material-symbols:comment"></iconify-icon> {{ total_comments }}</strong>
-            {% endwith %}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4 mt3">
-            <h3>Comments:</h3>
-            <div class="card-cody">
+        <div class="card col-md-10 m-4">
+            <div class="card-header"><h3>Feedback:</h3></div>
+            <div class="card-body">
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
@@ -160,30 +71,27 @@
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
+                <hr>
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card">
-            {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form method="post">
-                {{ feedback_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% endif %}
+    </div>
+    <div class="row">
+        {% if user.is_authenticated %}
+        <div class="card col-md-10 m-4">
+            <div class="card-title"><h3>Leave feedback:</h3></div>
+            <div class="card-body">
+                <p>Comment as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ feedback_form | crispy }}
+                    {% csrf_token %}
+                    <br>
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
-
-{% if user.id == post.author.id %}
-    <div class="update-btn-group">
-        <a href="{% url 'update_ink' post.slug %}" class="edit-btn" role="button">Edit</a>
-        <a href="{% url 'delete_ink' post.slug %}" class="edit-btn" role="button">Delete</a>
-    </div>
-{% endif %}
-
-<a role="button" href="{% url 'home' %}">Return</a> -->
 
 {% endblock content %}

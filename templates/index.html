@@ -69,7 +69,7 @@
 <div class="container-fluid">
     <div class="row d-flex justify-content-around">
         {% for post in post_list %}
-        <div class="col-md-5 p-3 m-4 ink-cards">
+        <div class="col-md-4 p-3 m-4 ink-cards">
             <a href="{% url 'ink_detail' post.slug %}" class="card-link">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -91,6 +91,7 @@
     {% endif %}
     {% endfor %}
 </div>
+
 <!-- PAGINATION -->
 {% if is_paginated %}
 <nav aria-label="Page navigation">
