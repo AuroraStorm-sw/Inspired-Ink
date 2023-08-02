@@ -11,14 +11,9 @@
         </div>
         <div class="card-body text-secondary">
             <h5 class="card-title">{{ post.author }} | {{ post.created_on}}</h5>
-            <!--Source scrollbar: 
-                https://stackoverflow.com/questions/2836827-->
-            <div style="overflow-y:scroll;">
-
                 <!--Source add linebreaks:
             https://code-institute-room.slack.com/archives/C8N285L9H/p1521104005000292-->
                 <p class="card-text ink-content">{{ post.content | linebreaksbr | safe }}</p>
-            </div>
         </div>
     </div>
     {% if user.id == post.author.id %}
@@ -58,7 +53,7 @@
 
 <div class="container-fluid">
     <div class="row comment-wrap">
-        <div class="card col-md-10 m-4">
+        <div class="card col m-4">
             <div class="card-header">
                 <h3>Feedback:</h3>
             </div>
@@ -85,7 +80,7 @@
     </div>
     <div class="row comment-wrap">
         {% if user.is_authenticated %}
-        <div class="card col-md-10 m-4">
+        <div class="card col m-4">
             <div class="card-title">
                 <h3>Leave feedback:</h3>
             </div>

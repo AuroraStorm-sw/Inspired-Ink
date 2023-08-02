@@ -75,12 +75,6 @@ a:hover {
 
 /* ---------- HOME PAGE ---------- */
 
-.wrapper {
-    max-width: 70vw;
-    padding-bottom: 20px;
-
-}
-
 .quote-card {
     padding: 5px;
 }
@@ -165,9 +159,7 @@ https://stackoverflow.com/questions/7241341
     padding: 10px;
 }
 
-.comment-wrap {
-    margin-left: 5rem;
-}
+
 
 /* ---------- FORM STYLING ---------- */
 
@@ -188,6 +180,10 @@ textarea{
     https://stackoverflow.com/questions/5235142/
     */
    resize: none;
+}
+
+label {
+    margin: 1rem;
 }
 
 form {
