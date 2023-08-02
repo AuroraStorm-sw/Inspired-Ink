@@ -1,4 +1,5 @@
-# Strategy
+# Introduction
+
 ## Why Inspired Ink?
 The thought behind Inspired Ink is to invite creative minds with an itch for expressing themselves in writing to get those ideas down on 'paper', so to say, while also prodiving the opportunity to enjoy fellow writers work and leave comments or feedback.
 
