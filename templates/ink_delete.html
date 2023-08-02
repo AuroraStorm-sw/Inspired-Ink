@@ -4,6 +4,7 @@
 
 {% block content %}
 
+<br>
 <h2 class="m-4">Are you sure you want to delete your Ink? <br>
     The decision is final.</h2> <br>
 
@@ -16,7 +17,7 @@ Inks -->
     <div class="button-wrap">
         <div class="update-btn-group">
             <button type="submit" class="btn delete-btn">Yes, my decision is final.</button>
-            <a href="{% url 'home' %}" class="btn edit-btn" role="button">No, I have regrets!</a>
+            <a href="{% url 'home' %}" class="btn cancel-btn" role="button">No, I have regrets!</a>
         </div>
     </div>
 </form>

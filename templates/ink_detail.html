@@ -4,6 +4,8 @@
 
 {% load crispy_forms_tags %}
 
+<!-- DISPLAY INK -->
+
 <div class="card-wrapper offset-md-2">
     <div class="card border-secondary mb-3">
         <div class="card-header">
@@ -16,14 +18,17 @@
             <p class="card-text ink-content">{{ post.content | linebreaksbr | safe }}</p>
         </div>
     </div>
+
     {% if user.id == post.author.id %}
     <div class="update-btn-group">
         <a href="{% url 'update_ink' post.slug %}" class="btn" role="button">Edit</a>
-        <a href="{% url 'delete_ink' post.slug %}" class="btn auth-btn" role="button">Delete</a>
+        <a href="{% url 'delete_ink' post.slug %}" class="btn cancel-btn" role="button">Delete</a>
     </div>
     {% endif %}
+
     <!-- LIKES AND COMNMENTS SYMBOLS -->
 
+    <br>
     {% if user.is_authenticated %}
     <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
         {% csrf_token %}
@@ -40,41 +45,53 @@
     {% else %}
     <iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
     {% endif %}
-    <span>{{ post.number_of_likes }} </span>
+    <span class="number-of-likes">{{ post.number_of_likes }}</span>
 
     {% with comments.count as total_comments %}
     <iconify-icon icon="material-symbols:comment" class="btn-like"></iconify-icon> {{ total_comments }}
     {% endwith %}
-
 </div>
+
+<!-- SHOW COMMENTS -->
 
 <div class="container-fluid">
     <div class="row comment-wrap">
         <div class="card col m-4">
-            <div class="card-header">
+            <div class="card-title">
                 <h3>Feedback:</h3>
             </div>
             <div class="card-body">
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
-                </div>
+                <p class="font-weight-bold">
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                        {{ comment.created_on }}
+                    </span> wrote:
+                </p>
+                {{ comment.body | linebreaks }}
                 <hr>
                 <!---Source:
                 https://stackoverflow.com/questions/17435233-->
                 {% empty %}
+                {% if user.is_authenticated %}
                 <p>No one has left any feedback yet!<br>
                     Maybe you want to be the first?</p>
+
+                {% else %}
+
+                <p>No one has left any feedback yet!<br>
+                    Maybe you want to be the first? <br><br>
+                    If so, <a href="{% url 'account_login' %}">sign in</a> or <a
+                        href="{% url 'account_signup' %}">create an account!</a></p>
+
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
+
+    <!-- LEAVE COMMENT FOR AUTHENTICATED USERS -->
+
     <div class="row comment-wrap">
         {% if user.is_authenticated %}
         <div class="card col m-4">
@@ -83,7 +100,7 @@
             </div>
             <div class="card-body">
                 <p>Comment as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post">
                     {{ feedback_form | crispy }}
                     {% csrf_token %}
                     <br>

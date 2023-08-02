@@ -49,6 +49,10 @@ For the site to reach its full potential for a user, these features are included
 ## Frameworks/Libraries
 
 # Credits
+
+## Images
+- https://www.pexels.com/photo/empty-brown-canvas-235985/ - Background image
+
 ## Sources for example posts
 - https://ozofe.com/sappho/to-atthis-the-inconstant/ - Poem by Sappho
 - https://ozofe.com/maya-angelou/on-aging/ - Poem by Maya Angelou
