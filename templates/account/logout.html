@@ -7,19 +7,26 @@
 {% block content %}
 
 
-<div class="container">
-  <div class="row m-4">
-    <h1>{% trans "Sign Out" %}</h1>
+<div class="container signup-form">
+  <div class="row">
+    <div class="col-md-8 offset-md-3">
+      <h1>{% trans "Sign Out" %}</h1>
+      <h2>Time go to?</h2>
 
-    <p class="p-3">{% trans 'Are you sure you want to sign out?' %}</p>
+      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+      <br>
+      <p>We're looking forward to seeing you soon again!</p>
+      <br>
 
-    <form method="post" action="{% url 'account_logout' %}">
-      {% csrf_token %}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-      <button type="submit" class="btn">{% trans 'Sign Out' %}</button>
-    </form>
+      <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button type="submit" class="btn">{% trans 'Sign Out' %}</button>
+        <button type="button" class="btn auth-btn"><a href="{% url 'home' %}" role="button">No, I'm not ready yet!</a></button>
+      </form>
+    </div>
   </div>
 </div>
 

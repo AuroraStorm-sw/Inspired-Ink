@@ -24,15 +24,12 @@ body {
     background-size: cover;
 }
 
-h1 {
-    font-family: 'Inknut Antiqua', serif;
-}
-
-h2 {
+h1, h2 {
     font-family: 'Inknut Antiqua', serif;
     text-align: center;
 
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 p {
@@ -90,10 +87,6 @@ a:hover {
     text-align: center;
 }
 
-.intro-text h1 {
-    margin-bottom: 2rem;
-}
-
 .intro-text p {
     font-size: 22px;
 }
@@ -106,13 +99,16 @@ https://stackoverflow.com/questions/7241341
 */
 
 .ink-cards {
-    max-width: 40rem;
+    max-width: 35rem;
 
     border: 1px solid;
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1690281632/ink1_gbmkhx.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+.ink-cards a {
+    color: #000;
 }
 
 .ink-cards:hover {
@@ -151,15 +147,8 @@ https://stackoverflow.com/questions/7241341
 /* ---------- VIEW INK ---------- */
 
 .card-wrapper {
-    margin: 5rem;
+    margin: 3rem;
 }
-
-.like-comment-wrap {
-    display: inline;
-    padding: 10px;
-}
-
-
 
 /* ---------- FORM STYLING ---------- */
 
@@ -169,36 +158,34 @@ https://stackoverflow.com/questions/7241341
     margin-bottom: 2rem;
 }
 
-input[type=text], 
-select, 
-textarea{
-  width: 100%;
-  padding: 12px;
-  border-radius: 4px;
-  box-sizing: border-box;
+textarea {
     /*Source:
     https://stackoverflow.com/questions/5235142/
-    */
-   resize: none;
+     */
+    resize: none;
 }
 
 label {
-    margin: 1rem;
+    /*Source:
+    https://www.w3docs.com/snippets/html/how-to-align-labels-next-to-inputs.html;*/
+    display: inline-block;
+    width: 12rem;
+    text-align: left;
+    
+    font-family: 'Inknut Antiqua', serif;
 }
 
 form {
     padding-bottom: 3rem;
 }
 
-.form-group {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-
-
+form p {
+    margin: 1rem;
 }
 
-.form-group>p {
-    display: block;
+.signup-form {
+    margin-top: 5rem;
+    text-align: center;
 }
 
 .page-link {

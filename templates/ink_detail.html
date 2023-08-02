@@ -11,9 +11,9 @@
         </div>
         <div class="card-body text-secondary">
             <h5 class="card-title">{{ post.author }} | {{ post.created_on}}</h5>
-                <!--Source add linebreaks:
+            <!--Source add linebreaks:
             https://code-institute-room.slack.com/archives/C8N285L9H/p1521104005000292-->
-                <p class="card-text ink-content">{{ post.content | linebreaksbr | safe }}</p>
+            <p class="card-text ink-content">{{ post.content | linebreaksbr | safe }}</p>
         </div>
     </div>
     {% if user.id == post.author.id %}
@@ -22,11 +22,8 @@
         <a href="{% url 'delete_ink' post.slug %}" class="btn auth-btn" role="button">Delete</a>
     </div>
     {% endif %}
-</div>
+    <!-- LIKES AND COMNMENTS SYMBOLS -->
 
-<!-- LIKES AND COMNMENTS SYMBOLS -->
-
-<div class="like-comment-wrap">
     {% if user.is_authenticated %}
     <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
         {% csrf_token %}
@@ -48,8 +45,8 @@
     {% with comments.count as total_comments %}
     <iconify-icon icon="material-symbols:comment" class="btn-like"></iconify-icon> {{ total_comments }}
     {% endwith %}
-</div>
 
+</div>
 
 <div class="container-fluid">
     <div class="row comment-wrap">

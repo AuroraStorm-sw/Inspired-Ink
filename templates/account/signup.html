@@ -6,28 +6,30 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container signup-form">
   <div class="row">
     <div class="col-md-8 offset-md-3">
 
       <h1 class="m-3">{% trans "Create account" %}</h1>
 
       <p>{% blocktrans %}
-        If you have not created an account yet, then please
-        <a href="{{ signup_url }}">sign up</a> first.
+        <h2>Welcome!</h2>
+        <p>We're excited to have you here.</p>
+        <p>Go ahead and create an account so you can start <br>
+        posting and interracting with the creative minds of Inspired Ink!</p>
         {% endblocktrans %}</p>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-md-8 offset-md-3">
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+      <form class="signup form-group" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class=" btn">{% trans "Sign Up" %} &raquo;</button>
+        <button type="submit" class="btn">{% trans "Sign Up" %} &raquo;</button>
       </form>
       <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
     </div>

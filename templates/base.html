@@ -69,9 +69,9 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li><a class="nav-link" href="{% url 'create_ink' %}">Create new Ink</a></li>
-                <li><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+                <li><a class="nav-link" href="{% url 'account_logout' %}">Sign out</a></li>
                 {% else %}
-                <li><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+                <li><a class="nav-link" href="{% url 'account_login' %}">Sign in</a></li>
                 <li><a class="nav-link" href="{% url 'account_signup' %}">Create Account</a></li>
                 {% endif %}
             </ul>
