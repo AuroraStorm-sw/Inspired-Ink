@@ -1,37 +1,35 @@
 {% extends "base.html" %}
 
 {% block title %}
-Category posts
+{{categorylist.cat}} inks
 {% endblock %}
 
 {% block content %}
 
-<div class="container-fluid">
-  <div class="row d-flex justify-content-around">
-    <h1 class="category-text">List of {{categorylist.cat}} Inks</h1>
-    {% for post in categorylist.posts %}
-    <div class="col-md-5 p-3 m-4 ink-cards">
-      <a href="{% url 'ink_detail' post.slug %}" class="card-link">
+<h1 class="category-text">List of {{categorylist.cat}} inks</h1>
+
+<div class="card-wrapper offset-md-2">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-around  p-3">
+      {% for post in categorylist.posts %}
+      <div class="card ink-cards  m-3">
         <div class="card-body">
-          <h5 class="card-title">
-            <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
-          </h5>
-          <h5>Written by: {{ post.author }} </h5>
-          <h5>Created: {{ post.created_on }} </h5>
-          <p> {{ post.excerpt }} </p>
-      </a>
+          <a href="{% url 'ink_detail' post.slug %}" class="card-link">
+            <h5 class="card-title">
+              <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">A {{post.category}} by</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{post.author}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Written: {{post.created_on}}</h6>
+            <p class="card-text">{{ post.excerpt }}</p>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
-  {% if forloop.counter|divisibleby:6 %}
+    <button type="button" class="btn"><a href="{% url 'home' %}" role="button" class="cancel-btn">Back</a></button>
 </div>
-
-<div class="row ink-cards-row">
-  {% endif %}
-  {% endfor %}
-</div>
-
-<button type="button" class="btn"><a href="{% url 'home' %}" role="button"
-    class="cancel-btn">Back</a></button>
 
 <!-- PAGINATION -->
 {% if is_paginated %}
