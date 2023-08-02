@@ -10,14 +10,10 @@ The goal of Inspired Ink is to provide writers from all different skill-levels t
 
 Writing doesn't have to be complicated or up to a certain standard, which is what I want to offer with Inspired Ink; a basic, age-less, relaxed place to write down whatever creative blurb floating around your head and categorize it the best you can.
 
-# User Story
-The baseline of my User Stories are collected in an Excel file that I then transferred into a Github Project that uses an agile approach. 
+# Agile and User Stories
+The baseline of my User Stories are collected in an Excel file that I then transferred into a Github Project that uses an agile approach. See (Here)[https://github.com/users/AuroraStorm-sw/projects/7]
 Each User Story is made up of an Epic, Acceptance critera, and a number of tasks, each User Story being tagged with either "must have" and/or "nice to have". I decided to collect all "must have" and "nice to have" tasks in the same User Story to keep it nice and neat.
-
-1. As a Site User I can ...
-
-# Agile planning
-## Epics
+To view all User Stories, please see the above link.
 
 # Scope
 For the site to reach its full potential for a user, these features are included in the release:
