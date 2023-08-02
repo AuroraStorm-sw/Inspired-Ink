@@ -12,6 +12,7 @@ Writing doesn't have to be complicated or up to a certain standard, which is wha
 
 # Agile and User Stories
 The baseline of my User Stories are collected in an Excel file that I then transferred into a Github Project that uses an agile approach. See (Here)[https://github.com/users/AuroraStorm-sw/projects/7]
+
 Each User Story is made up of an Epic, Acceptance critera, and a number of tasks, each User Story being tagged with either "must have" and/or "nice to have". I decided to collect all "must have" and "nice to have" tasks in the same User Story to keep it nice and neat.
 To view all User Stories, please see the above link.
 
@@ -40,6 +41,10 @@ For the site to reach its full potential for a user, these features are included
 
 # Technologies Used
 ## Languages
+- HTML5
+- CSS
+- Python
+- Javascript
 ## Django packages
 ## Frameworks/Libraries
 
