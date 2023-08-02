@@ -120,27 +120,6 @@ https://stackoverflow.com/questions/7241341
 }
 
 
-/* ---------- LOGIN/LOGOUT ---------- */
-
-.account-wrap {
-    text-align: center;
-}
-
-/* ---------- FOOTER ---------- */
-
-.footer {
-    width: 100%;
-    border: 1px solid #774605;
-    background-color: #b96e46;
-}
-
-.footer-link {
-    font-size: 2.1rem;
-    color: black;
-    text-align: center;
-}
-
-
 /* ---------- VIEW INK ---------- */
 
 .card-wrapper {
@@ -222,6 +201,21 @@ form p {
     margin: 2rem;
 }
 
+/* ---------- FOOTER ---------- */
+
+.footer {
+    width: 100%;
+    border: 1px solid #774605;
+    background-color: #b96e46;
+}
+
+.footer-link {
+    font-size: 2.1rem;
+    color: black;
+    text-align: center;
+}
+
+
   /* ---------- BUTTONS ---------- */
 
 .btn {
@@ -232,26 +226,34 @@ form p {
     border: none;
 }
 
-.cancel-btn {
+.btn-cancel {
     color: #bebcbc;
 } 
 
-.cancel-btn a {
+.btn-cancel a {
     color: #bebcbc;
 }
 
 .btn:hover {
     background-color: #774605;
+    border: none;
     color: #fff;
 }
 
 .btn-like {
-    font-size: 26px;
+    font-size: 3rem;
+    
+    background: none;
+    border: none;
 }
 
 .button-wrap {
     margin-top: 2rem;
     text-align: center;
+}
+
+.btn-like:hover {
+    color: #774605;
 }
 
 

@@ -4,7 +4,7 @@
 
 {% load crispy_forms_tags %}
 
-<!-- DISPLAY INK -->
+<!-- DISPLAY INK POST -->
 
 <div class="card-wrapper offset-md-2">
     <div class="card border-secondary mb-3">
@@ -22,7 +22,7 @@
     {% if user.id == post.author.id %}
     <div class="update-btn-group">
         <a href="{% url 'update_ink' post.slug %}" class="btn" role="button">Edit</a>
-        <a href="{% url 'delete_ink' post.slug %}" class="btn cancel-btn" role="button">Delete</a>
+        <a href="{% url 'delete_ink' post.slug %}" class="btn btn-cancel" role="button">Delete</a>
     </div>
     {% endif %}
 
@@ -34,16 +34,16 @@
         {% csrf_token %}
         {% if liked %}
         <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
-            <iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
+            <iconify-icon icon="mdi:ink-plus"></iconify-icon>
         </button>
         {% else %}
         <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
-            <iconify-icon icon="teenyicons:heart-outline"></iconify-icon>
+            <iconify-icon icon="mdi:ink-plus-outline"></iconify-icon>
         </button>
         {% endif %}
     </form>
     {% else %}
-    <iconify-icon icon="teenyicons:heart-solid"></iconify-icon>
+    <iconify-icon icon="mdi:ink"></iconify-icon>
     {% endif %}
     <span class="number-of-likes">{{ post.number_of_likes }}</span>
 

@@ -53,6 +53,11 @@ For the site to reach its full potential for a user, these features are included
 ## Images
 - https://www.pexels.com/photo/empty-brown-canvas-235985/ - Background image
 
+## Icons
+- https://icon-sets.iconify.design/mdi/ink/
+- https://icon-sets.iconify.design/mdi/ink-plus/
+- https://icon-sets.iconify.design/mdi/ink-plus-outline/
+
 ## Sources for example posts
 - https://ozofe.com/sappho/to-atthis-the-inconstant/ - Poem by Sappho
 - https://ozofe.com/maya-angelou/on-aging/ - Poem by Maya Angelou

@@ -23,7 +23,7 @@ Inks -->
         {% csrf_token %}
         {{ form.as_p | safe }}
             <button type="submit" class="btn">Update</button>
-            <button type="button" class="btn cancel-btn"><a href="{% url 'home' %}" role="button">Cancel</a></button>
+            <button type="button" class="btn btn-cancel"><a href="{% url 'home' %}" role="button">Cancel</a></button>
     </form>
 </div>
 {% endif %}
