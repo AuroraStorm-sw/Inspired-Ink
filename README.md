@@ -75,7 +75,7 @@ For the site to reach its full potential for a user, these features are included
 Solution: Reset the database to remove the error and recreate superuser.
 
 2. Static files not loading on Heroku.
-Solution:
+Solution: Through tutor support, they found a spelling error in loading style.css in base.html  after a lot of trial and error.
 
 # Deployment
 
