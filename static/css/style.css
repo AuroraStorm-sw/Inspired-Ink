@@ -52,8 +52,7 @@ a:hover {
 /* ---------- NAVBAR ---------- */
 
 .navbar-brand {
-    font-size: 30px;
-    font-family: 'Inknut Antiqua', serif;
+   font-family: 'Inknut Antiqua', serif;
 
     padding-left: 20px;
 }
@@ -128,6 +127,10 @@ https://stackoverflow.com/questions/7241341
 
 .number-of-likes {
     margin-right: 1rem;
+}
+
+.comment-icon {
+    font-size: 3rem;
 }
 
 /* ---------- FORM STYLING ---------- */
@@ -209,18 +212,13 @@ form p {
     background-color: #b96e46;
 }
 
-.footer ul {
-    text-decoration: none;
-}
-
-.footer li {
-    display: inline;
-}
-
-.footer a {
+footer a {
     font-size: 2.1rem;
     color: black;
+
     text-align: center;
+
+    margin-left: 20px;
 }
 
 
@@ -249,7 +247,7 @@ form p {
 }
 
 .btn-like {
-    font-size: 3rem;
+    font-size: 3.2rem;
     
     background: none;
     border: none;
