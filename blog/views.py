@@ -173,5 +173,3 @@ class DeleteInkView(DeleteView):
         msg = 'Your Ink has been delivered to the void.'
         messages.add_message(self.request, messages.SUCCESS, msg)
         return super(DeleteView, self).delete(request, *args, **kwargs)
-
-

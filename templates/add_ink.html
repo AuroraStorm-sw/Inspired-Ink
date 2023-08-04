@@ -8,7 +8,7 @@
 
 <div class="container add-ink">
     <div class="row add-ink-text">
-        <h2>Add Ink</h2>
+        <h2>Write an Ink</h2>
         <p>Here is where you write your new ink!</p>
         <p>Be it a poem, a haiku, or a short story, it fits right here.</p>
     </div>
@@ -17,7 +17,7 @@
         {% csrf_token %}
         {{ form.as_p | safe }}
         <button class="btn btn-primary" type="submit">Submit</button>
-        <button type="button" class="btn btn-cancel"><a href="{% url 'home' %}" role="button">Cancel</a></button>
+        <a href="{% url 'home' %}" role="button" class="btn btn-cancel">Cancel</a>
     </form>
 </div>
 {% endblock content %}

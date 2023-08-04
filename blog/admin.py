@@ -11,6 +11,7 @@ that Summernote should be applied to, in this case the
 content text field.
 """
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
