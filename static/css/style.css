@@ -63,10 +63,6 @@ a:hover {
     margin: 5px;
 }
 
-.navbar li a:active {
-    text-decoration: underline;
-}
-
 .navbar-toggler-icon,
 .navbar-toggler {
     padding-right: 1rem;

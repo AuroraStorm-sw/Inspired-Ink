@@ -11,7 +11,7 @@ The goal of Inspired Ink is to provide writers from all different skill-levels t
 Writing doesn't have to be complicated or up to a certain standard, which is what I want to offer with Inspired Ink; a basic, age-less, relaxed place to write down whatever creative blurb floating around your head and categorize it the best you can.
 
 # Agile and User Stories
-The baseline of my User Stories are collected in an Excel file that I then transferred into a Github Project that uses an agile approach. See (Here)[https://github.com/users/AuroraStorm-sw/projects/7]
+The baseline of my User Stories are collected in an Excel file that I then transferred into a Github Project that uses an agile approach. See [Here](https://github.com/users/AuroraStorm-sw/projects/7) for the full project.
 
 Each User Story is made up of an Epic, Acceptance critera, and a number of tasks, each User Story being tagged with either "must have" and/or "nice to have". I decided to collect all "must have" and "nice to have" tasks in the same User Story to keep it nice and neat.
 To view all User Stories, please see the above link.
@@ -24,42 +24,83 @@ For the site to reach its full potential for a user, these features are included
 # Datasbase model
 
 # Design
+
+The overall idea for the design was based on parchment - old, stained brown parchment which gives a bit of an old cozy feeling without coming across as pretentious. 
+The issue I find with some blogs and forums for creative writing is that they can portray this sense of professionalism that scares beginners away from joining in on writing, which is something I don't want on my website. 
+I want it to feel welcoming and homey, which is another reason for the choice of colors and layouts.
+
+Given the name of the website, I decided to implement a few drops of ink here and there, mainly for the logo and for user to "ink" a post in the same way you "like" a post, giving the webpage a bit more character and staying true to its name.
+
+No more endless scrolling through cluttered pages overflowing with thin lines of post links; no more uncomfortable brightness that has you reaching for sunglasses; this webpage offers calming nuances of brown with a splash of color.
+
 ## Colors
+I based the colors around the background image and used [Coolors](https://coolors.co) to create a palette based on one of the nuances. 
+
+![Palette](https://res.cloudinary.com/dg4yefryk/image/upload/v1691166288/palette_e1c8em.png)
+
+From this palette, I ended up focusing on the colors #3a2202 and #b96e46, and a few details of #774605. With black text on top of these reddish brown colors pop enough to make the font visible, but not without taking away from the calm vibes.
+
 ## Fonts
 
+For fonts I ended up with Inkut Antiqua for main headers and links. I searched for "Ink" on [Google Fonts](https://fonts.google.com) and stumbled across this font by accident, but felt immediately that it fits the vibe of my website.
+
+![Inkut](https://res.cloudinary.com/dg4yefryk/image/upload/v1691167044/font-inknut_yimden.png)
+
+For paragraphs, I picked Roboto, which is a very casual font that works well together with Inkut that stands out as a more expressive font, and I found these two to compliment each other nicely.
+
+![Roboto](https://res.cloudinary.com/dg4yefryk/image/upload/v1691167044/font-roboto_dfxcrd.png)
 
 # Features
 - Home page
     - Navbar
+
+    The navbar consists of a basic Bootstrap navbar with tabs and a dropdown for categories that includes a hamburger menu for smaller viewports.
+    When logged in, the user can navigate between the home page, available categories, create a new ink, or sign out.
+    For users without an account or who aren't logged in, they can navigate between the home page, available categories, sign in, or create an account.
+    The logo also serves as a link back to the home page.
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-nav_c8igfc.png)
 
     - Intro
+
+    The home page introduction consists of a few paragraphs of text explaining what the website is about and for whom, inspiring users to create their own Inks and leaving feedback on others.
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146807/img-intro_cxw4kz.png)
 
     - Inks
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146806/img-posts_yiuvph.png)
 
     - Footer
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146804/img-footer_aazqge.png)
 
 - Create a new Ink
     - Write
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create_sfsiwh.png)
 
     - Edit Ink
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147794/img-update_jxgaif.png)
 
     - Delete Ink
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146804/img-delete_j7e422.png)
 
 - Category Archive
+
     - Category
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147906/img-category_swghga.png)
 
 - Account
     - Create account
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create-account_ugtqsx.png)
+
     - Sign in/Sign out
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146742/img-sign-in_a3hyn0.png)
 
 
@@ -71,6 +112,10 @@ For the site to reach its full potential for a user, these features are included
 - Javascript
 ## Django packages
 ## Frameworks/Libraries
+
+## Resourses
+- [Table Converter](https://tableconvert.com/) for Manual Testing
+- [Tinypng](https://tinypng.com/) for compressing background image
 
 # Credits
 
@@ -151,9 +196,13 @@ Each .py file has been passed through the linter with very few errors; those com
 
 ![AxeDevtools](https://res.cloudinary.com/dg4yefryk/image/upload/v1691160050/axe-devtools_nary38.png)
 
+## [WAVE](https://wave.webaim.org/)
+![WAVE](https://res.cloudinary.com/dg4yefryk/image/upload/v1691164948/wave_dxpdvl.png)
+
+
 ## Manual testing
 
-![]()
+
 ![]()
 ![]()
 ![]()
@@ -172,7 +221,7 @@ Each .py file has been passed through the linter with very few errors; those com
 | Category         | I can browse different categories via the navbar                                                                                               | Pass |
 | Pagination       | I can browse through multiple pages on the home page if there are more than six posts                                                          | Pass |
 | Links            | All of the links throughout the page are fully functional                                                                                      | Pass |
-| Buttons          | All of the buttons direct me to their designated function                                                                                      |      |
+| Buttons          | All of the buttons direct me to their designated function                                                                                      | Pass |
 | Footer           | I can reach the different social medias sites via the footer, and they all open in new tabs.                                                   | Pass |
 
 
@@ -182,7 +231,7 @@ Each .py file has been passed through the linter with very few errors; those com
 Solution: Reset the database to remove the error and recreate superuser.
 
 2. Static files not loading on Heroku.
-Solution: Through tutor support, they found a spelling error in loading style.css in base.html  after a lot of trial and error.
+Solution: Through tutor support, they found a spelling error in loading style.css in base.html after a lot of trial and error.
 
 3. View height on the webpage is too high, forcing the user to scroll to see the footer.
 
