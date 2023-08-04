@@ -5,6 +5,12 @@ The thought behind Inspired Ink is to invite creative minds with an itch for exp
 
 With many forums for writing singling out a specific kind of creative writing, say fiction or poems, Inspired Ink offers a wider variety of categories for your work so that you don't have to search for one site per category. This makes it easier for beginners and master alike to share their work in one single space as well as for others to find a varied asortment of works without having to scour the internet depending on what they're looking for.
 
+## User goals
+- To join a community of like-minded creative writers
+- To share my writing and interract with other's writing
+- To get inspiration from other's writing to try something new, like a haiku for the first time
+- To learn about types of creative writing from fellow writers by viewing their work
+
 ## Site goals
 The goal of Inspired Ink is to provide writers from all different skill-levels to have a place to express themselves without feeling the preassure of comparing themselves to the grand minds of poetry or novel sites, where famous writers are often quoted or used as inspiration.
 
@@ -19,7 +25,23 @@ To view all User Stories, please see the above link.
 # Scope
 For the site to reach its full potential for a user, these features are included in the release:
 
-# Wireframe
+# Wireframes
+
+I began with very little inspiration for the layout of the webpage, knowing only what it should look like when viewing an Ink, and that the home page should have an introductionary part followed with posts.
+
+Throughout the project, and from browsing the internet for different examples of poetry and creative writing websites, I settled for something uncomplicated, seeing the, in my opinion, cluttered examples in the wild. I want the focus to be on the submitted stories and poems, and nothing more.
+
+<details>
+<summary>View Wireframes</summary>
+<br>
+
+![Post](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/post_d3jc7l.png)
+
+![Home](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146803/home_yl07ap.png)
+
+![Account](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146802/account_e88rih.png)
+</details>
+<br>
 
 # Datasbase model
 
@@ -177,6 +199,10 @@ All pages of the website has been run through W3, with two of them coming out wi
 
 ## No errors
 
+<details>
+<summary>View all results with no errors.</summary>
+<br>
+
 - Sign in
 
 ![SignIn](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-login_fl1u4l.png)
@@ -204,7 +230,7 @@ All pages of the website has been run through W3, with two of them coming out wi
 - Delete Ink
 
 ![InkDelete](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/text-delete_jhahvj.png)
-
+</details>
 
 ## Errors
 
@@ -231,11 +257,6 @@ Each .py file has been passed through the linter with very few errors; those com
 
 
 ## Manual testing
-
-
-![]()
-![]()
-![]()
 
 | Action           | Expected Result                                                                                                                                | Pass |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------|------|
@@ -272,7 +293,7 @@ Github
 
 Steps I took to deploy my website;
 
-1. Go to the repository for Portfolio-project-3
+1. Go to the repository for Inspired-Ink
 2. Click the Settings tab and locate the Pages tab
 3. Select to deploy from main branch
 4. A few minutes later, upon refreshing the page, my site was live
