@@ -65,32 +65,46 @@ For paragraphs, I picked Roboto, which is a very casual font that works well tog
 
     The home page introduction consists of a few paragraphs of text explaining what the website is about and for whom, inspiring users to create their own Inks and leaving feedback or inkdrops (likes) on others'.
 
-    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146807/img-intro_cxw4kz.png)
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691168745/img-intro_m958o1.png)
 
     - Inks
+
+    After scouring the internet and Slack for inspiration for the structure of how the posts should be displayed, I ended up taking layout inspiration from [Kathrin's Haiku blog](https://github.com/Kathrin-ddggxh/woohoo-haiku), as they are of perfect size for cards displaying little information, compared to a lot of other blogs that need bigger cards that often includes images. With this Bootstrap card layout, the posts are responsive in all sizes, and stack prettily on smaller screens without sacrificing any text.
+
+    Adding to the layout, I found a watercolor-esque wallpaper that I faded to a lighter opacity for the background, adding to an inky feel.
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146806/img-posts_yiuvph.png)
 
     - Footer
+
+    The footer is very basic and straight-forward, offering links to social media.
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146804/img-footer_aazqge.png)
 
 - Create a new Ink
     - Write
 
+    The layout for the form to write an Ink is kept very simplistic, as creating an Ink should't feel like rocket science. It consists of an author input, category, title, an excerpt if the user feels like adding one, and then the main content. Below are two buttons, one for submitting the Ink and once for cancelling, which returns the user to the home page.
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create_sfsiwh.png)
 
     - Edit Ink
 
+    Similarly to the Create a new Ink page, the Edit page is very simplistic. The user can update the title, excerpt, and main content. There are two buttons below, one for updating the Ink, and one for cancelling out of edit mode. This can only be accessed by the author of the Ink.
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147794/img-update_jxgaif.png)
 
     - Delete Ink
+
+    Should the user decide to delete an Ink, they'll be directed to a page where they are asked to confirm if they with to delete it or not, giving them the options to go ahead and delete their Ink, or cancel out and return to the home page.
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146804/img-delete_j7e422.png)
 
 - Category Archive
 
     - Category
+
+    When browsing the category list, the 
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147906/img-category_swghga.png)
 
@@ -122,6 +136,7 @@ For paragraphs, I picked Roboto, which is a very casual font that works well tog
 ## Images
 - [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
 - [Quote image](https://abstract.desktopnexus.com/get/1737801/?t=146uo7bue09b2o59gjgv030rd364ccdb5086d33)
+- [Ink Card Image](https://wallpapercave.com/w/wp1938057)
 
 ## Icons
 - https://icon-sets.iconify.design/mdi/ink/

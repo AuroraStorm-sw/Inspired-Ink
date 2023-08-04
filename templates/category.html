@@ -28,7 +28,11 @@
       </div>
       {% endfor %}
   </div>
-  <a href="{% url 'home' %}" role="button" class="btn">Back</a>
+  <!--
+    Source:
+    https://stackoverflow.com/questions/41664991
+  -->
+  <div class="col text-center"><a href="{% url 'home' %}" role="button" class="btn">Back</a></div>
 </div>
 
 <!-- PAGINATION -->
