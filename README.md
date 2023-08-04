@@ -63,7 +63,7 @@ For paragraphs, I picked Roboto, which is a very casual font that works well tog
 
     - Intro
 
-    The home page introduction consists of a few paragraphs of text explaining what the website is about and for whom, inspiring users to create their own Inks and leaving feedback on others.
+    The home page introduction consists of a few paragraphs of text explaining what the website is about and for whom, inspiring users to create their own Inks and leaving feedback or inkdrops (likes) on others'.
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146807/img-intro_cxw4kz.png)
 
