@@ -150,48 +150,22 @@ For paragraphs, I picked Roboto, which is a very casual font that works well tog
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691171483/signout_vbjwku.png)
 
-# Technologies Used
 
-## Languages
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/CSS)
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+# CRUD
 
-## Django packages/Frameworks/Libraries
+- Create: An authenticated user can create and submit an Ink post.
 
+- Read: A user can browse all the posted Inks.
 
+- Update: An authenticated user can edit their own submitted Ink posts.
 
-
-## Resourses
-- [Table Converter](https://tableconvert.com/) for Manual Testing structuring
-- [Tinypng](https://tinypng.com/) for compressing background image
-- [Coolors](https://coolors.co) for compressing background image
-
-# Credits
-
-## Images
-- [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
-- [Quote image](https://abstract.desktopnexus.com/get/1737801/?t=146uo7bue09b2o59gjgv030rd364ccdb5086d33)
-- [Ink Card Image](https://wallpapercave.com/w/wp1938057)
-
-## Icons
-- https://icon-sets.iconify.design/mdi/ink/
-- https://icon-sets.iconify.design/mdi/ink-plus/
-- https://icon-sets.iconify.design/mdi/ink-plus-outline/
-
-## Sources for example posts
-- [Poem by Sappho](https://ozofe.com/sappho/to-atthis-the-inconstant/)
-- [Poem by Maya Angelou](https://ozofe.com/maya-angelou/on-aging/)
-- [Heiku by Ezra Pond](https://reedsy.com/discovery/blog/haiku-poem-examples)
-- [Part of the lyrics to War by Poets Of the Fall](https://www.songlyrics.com/poets-of-the-fall/war-lyrics/)
-- [The story of an Hour by Kate Chopin](https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour ) 
-- [Lyric part of Lie to Me by Riell](https://genius.com/Riell-lie-to-me-lyrics) 
+- Delete: An authenticated user can delete their own submitted Ink posts.
 
 # Testing
 
 ## Validator testing
 
+## Code
 
 [W3 HTML checker](https://validator.w3.org)
 
@@ -242,6 +216,12 @@ Each .py file has been passed through the linter with very few errors; those com
 
 ![linter](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/linter-test-model_hslsux.png)
 
+
+## [JSHint]([https://jshint.com/])
+
+![https://jshint.com/](https://res.cloudinary.com/dg4yefryk/image/upload/v1691180009/test-javascript_e99aqr.png)
+
+
 ### Accessability
 
 ## [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
@@ -286,6 +266,12 @@ Solution: Through tutor support, they found a spelling error in loading style.cs
 
 3. View height on the webpage is too high, forcing the user to scroll to see the footer.
 
+# Future implements - nice to haves
+
+- Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was laid to the side due to deadline.
+- Add a short backstory about each writing styles' origin on the category pages.
+
+
 
 # Deployment
 
@@ -328,6 +314,79 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 9. Scroll back up and click the "Deploy" tab
 10. Here, you select "GitHub" as deployment method and search for your repository to link them together
 11. Scroll down the page and select if you want to "Enable Automatic Deploys" to automatically deploy your pushes from GitHub to Heroku.
+
+# Technologies Used
+
+## Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks
+- [Django](https://www.djangoproject.com/) - The main Python framework used to develop this project.
+- [Bootstrap](https://getbootstrap.com/) - For general layouts and responsiveness across the site.
+- [ElephantSQL](https://www.elephantsql.com/) - The production database used for the project.
+- [GitHub](https://github.com/) - Used to host the source code.
+- [Gitpod](https://gitpod.io/) - Used to commit, comment, and push code throughout the project.
+- [Heroku](https://www.heroku.com) - Used for app deployment.
+- [Balsamiq](https://balsamiq.com/) - For creating wireframes for the project.
+- [Cloudinary](https://console.cloudinary.com) - For storing all static files and images.
+
+## Tools
+- [JsHint](https://jshint.com/) - For validating Javascript code
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - 
+- [W3C HTML Validator](https://validator.w3.org/) - 
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) - 
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - 
+- [HTMLHint](https://htmlhint.com/) - 
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/) - 
+- [WAVE](https://wave.webaim.org/) - 
+- [Grammarly](https://app.grammarly.com/) - 
+
+
+## Packages
+
+- Django - An MVP, model-template-view, Python-based web framework, used for building projects.
+- django-allauth - Used for account registration, managing signing in and out, and authentication.
+- cloudinary_storage - Storage backend for Cloudinary that is used for static storage.
+- django_summernote - Integrates Summernote WYSIWYG editor into Django projects. This package is installed but ended up not being used in the project.
+- crispy_forms - Makes styling Django forms easier.
+
+
+## Resourses
+- [Table Converter](https://tableconvert.com/) - for Manual Testing structuring
+- [Tinypng](https://tinypng.com/) - for compressing background image
+- [Coolors](https://coolors.co) - for generating a color palette
+- [Google Fonts](https://fonts.google.com) - for browsing and implementing fonts
+
+# Credits
+
+## Images
+- [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
+- [Quote image](https://abstract.desktopnexus.com/get/1737801/?t=146uo7bue09b2o59gjgv030rd364ccdb5086d33)
+- [Ink Card Image](https://wallpapercave.com/w/wp1938057)
+
+## Icons
+- https://icon-sets.iconify.design/mdi/ink/
+- https://icon-sets.iconify.design/mdi/ink-plus/
+- https://icon-sets.iconify.design/mdi/ink-plus-outline/
+
+## Sources for example posts
+- [Poem by Sappho](https://ozofe.com/sappho/to-atthis-the-inconstant/)
+- [Poem by Maya Angelou](https://ozofe.com/maya-angelou/on-aging/)
+- [Heiku by Ezra Pond](https://reedsy.com/discovery/blog/haiku-poem-examples)
+- [Part of the lyrics to War by Poets Of the Fall](https://www.songlyrics.com/poets-of-the-fall/war-lyrics/)
+- [The story of an Hour by Kate Chopin](https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour ) 
+- [Lyric part of Lie to Me by Riell](https://genius.com/Riell-lie-to-me-lyrics)
+
+## Guiding
+- [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&index=4) - Youtube video guidance on how to add a category model and view.
+- [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - A playlist of Youtube videos going through all stages of building a Django blog that I used to browse through to get tips and tricks on how to structure models, views, and urls.
+- []()
+- []()
+- []()
+
 
 
 # Final thoughts
