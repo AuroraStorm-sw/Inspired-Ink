@@ -1,9 +1,46 @@
-# Introduction
-
-## Why Inspired Ink?
+# Why Inspired Ink?
 The thought behind Inspired Ink is to invite creative minds with an itch for expressing themselves in writing to get those ideas down on 'paper', so to say, while also prodiving the opportunity to enjoy fellow writers work and leave comments or feedback.
 
 With many forums for writing singling out a specific kind of creative writing, say fiction or poems, Inspired Ink offers a wider variety of categories for your work so that you don't have to search for one site per category. This makes it easier for beginners and master alike to share their work in one single space as well as for others to find a varied asortment of works without having to scour the internet depending on what they're looking for.
+
+#
+
+- [Introduction](#introduction)
+    - [User Goals](#user-goals)
+    - [Site Goals](#site-goals)
+- [Agile and User stories](#agile-and-user-stories)
+- [Scope](#scope)
+- [Wireframes](#wireframes)
+- [Design](#design)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
+- [Features](#features)
+- [Structure](#structure)
+- [CRUD](#crud)
+- [Testing](#testing)
+    - [Validator](#validator-testing)
+    - [Code](#code)
+    - [No errors](#no-errors)
+    - [Errors](#errors)
+        - [Accessability](#accessability)
+    - [Manual testing](#manual-testing)
+- [Bugs](#bugs)
+- [Future implements - nice to have](#future-implements---nice-to-haves)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks](#frameworks)
+    - [Tools](#tools)
+    - [Libraries](#libraries)
+    - [Packages](#packages)
+- [Resourses](#resourses)
+    - [Assisting](#assisting)
+    - [Images](#images)
+    - [Icons](#icons)
+    - [Sources for example posts](#sources-for-example-posts)
+    - [Credits](#credits)
+
+# Introduction
 
 ## User goals
 - To join a community of like-minded creative writers
@@ -42,8 +79,6 @@ Throughout the project, and from browsing the internet for different examples of
 ![Account](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146802/account_e88rih.png)
 </details>
 <br>
-
-# Datasbase model
 
 # Design
 
@@ -169,11 +204,9 @@ The Comment model is a custom model not included in the courseware.
 
 # Testing
 
-## Validator testing
+## Validator
 
 ## Code
-
-# Testing
 
 [W3 HTML checker](https://validator.w3.org)
 
@@ -271,13 +304,10 @@ Solution: Reset the database to remove the error and recreate superuser.
 2. Static files not loading on Heroku.
 Solution: Through tutor support, they found a spelling error in loading style.css in base.html after a lot of trial and error.
 
-3. View height on the webpage is too high, forcing the user to scroll to see the footer.
-
 # Future implements - nice to haves
 
 - Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was laid to the side due to deadline.
 - Add a short backstory about each writing styles' origin on the category pages.
-
 
 # Deployment
 
@@ -365,13 +395,13 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 - django_summernote - Integrates Summernote WYSIWYG editor into Django projects. This package is installed but ended up not being used in the project.
 - crispy_forms - Makes styling Django forms easier.
 
+# Resourses
 
-## Resourses
+## Assisting
 - [Table Converter](https://tableconvert.com/) - for Manual Testing structuring.
 - [Tinypng](https://tinypng.com/) - for compressing background image.
 - [Coolors](https://coolors.co) - for generating a color palette.
 - [Google Fonts](https://fonts.google.com) - for browsing and implementing fonts.
-- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - the template used as a base for the project.
 
 ## Images
 - [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
@@ -391,14 +421,14 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 - [The story of an Hour by Kate Chopin](https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour ) 
 - [Lyric part of Lie to Me by Riell](https://genius.com/Riell-lie-to-me-lyrics)
 
-## Guiding
+# Credits
+
 - [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&index=4) - Youtube video guidance on how to add a category model and view for the custom model.
 - [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - A playlist of Youtube videos going through all stages of building a Django blog that I used to browse through to get tips and tricks on how to structure models, views, and urls.
 - [StackOverflow](https://stackoverflow.com/) - A forum used throughout the project when searching for solutions for errors or ideas on views or how to add specific functions to the website. Throughout the project, sources have been added to each corresponding piece of code in comments.
 - [Slack](https://slack.com/) - A lot of answers to errors and frustrations have been found when browsing issues across different channels.
 [Code Institute Courseware](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/) - Code Institute coarseware used for the basic structure of the Ink and Feedback/Comment models.
-
-# Final thoughts and credits
+- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - the template used as a base for the project.
 
 - Tutor support
 - Course friends
