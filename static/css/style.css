@@ -231,12 +231,8 @@ footer a {
     border: none;
 }
 
-.btn-cancel {
-    color: #bebcbc;
-} 
-
-.btn-cancel a {
-    color: #bebcbc;
+.btn-cancel:hover {
+    color: #000;
 }
 
 .btn:hover {

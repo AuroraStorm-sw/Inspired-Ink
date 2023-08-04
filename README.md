@@ -98,28 +98,85 @@ For the site to reach its full potential for a user, these features are included
 
 [W3 HTML checker](https://validator.w3.org)
 
-All pages of the website has been run through W3, with two of them coming out with 
+All pages of the website has been run through W3, with two of them coming out with seemingly false positive results.
+
+- Sign in
 
 ![SignIn](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-login_fl1u4l.png)
+
+- Sign out
+
 ![SignOut](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-sign-out_s9dhoi.png)
+
+- Sign up
+
 ![SignUp](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-signup_bftkjh.png)
+
+ - Home page
+
 ![Home](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-home_rwd4lx.png)
+
+ - Add new ink
+
 ![AddInk](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-add-ink_tq3a5e.png)
+
+ - View Ink post
+
+![Category](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-category_w6bujd.png)
+
+- Delete Ink
+
+![InkDelete](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/text-delete_jhahvj.png)
+
+
+## Errors
+
+W3 Testing came with 2 errors for 2 pages, 1 for Viewing an Ink and 1 for Editing an Ink.
+According to W3, the View Ink site has two stray ending divs, one belonging to the top div class="container-fluid" as seen below;
+
 ![InkView](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151150/test-detail_bbnkqd.png)
     ![InkViewCode](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151150/test-detail-code_cevs2o.png)
-![Category](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-category_w6bujd.png)
-![InkDelete](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/text-delete_jhahvj.png)
+
+When scouring my code, I could not find where these errors pointed to, and for the errors to go away, I had to delete open tags that belongs to the top div class="container-fluid", which in turn leaves the div open and so destroys the layout of my comment section.
+When validating the same page with a browser addon HTML validator, including W3c Online, these errors were not present:
+
+![W3OnlineResult](https://res.cloudinary.com/dg4yefryk/image/upload/v1691157064/w3online-result_turusx.png)
+
+I have not been able to solve this error, and it does not negatively affect my website in anyway that I can find.
+
+For the Edit Ink page, the W3 error claims that there is an unclosed div in where my background image is wrapped around the block content tags; 
+
 ![InkEdit](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151475/test-edit_gkajnl.png)
+    ![InkEditCode](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151475/test-edit-code_ioc9tw.png)
+
+The code in question has a closing div;
+
+![bg-img-code](https://res.cloudinary.com/dg4yefryk/image/upload/v1691157301/background-img-code_fahq68.png)
+
+Similarly, when validating the page with the browser extension, there were no errors thrown.
+And as with the previous error, I have not been able to solve it, and it does not affect my code in any negative way.
+
+## CI Python Linter
+
+Each .py file has been passed through the linter with very few errors; those coming up were in regards to trailing whitespace, missing space, and missing new line at the end of the code. These were all easily fixed, and the files are now free of errors.
+
+!linter[https://pep8ci.herokuapp.com/](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/linter-test-model_hslsux.png)
 
 
+## Lighthouse
 
+![Lighthouse](https://res.cloudinary.com/dg4yefryk/image/upload/v1691159942/lighthouse_eipqg2.png)
 
+## Axe DevTools
 
-![]()
-![]()
+![AxeDevtools](https://res.cloudinary.com/dg4yefryk/image/upload/v1691160050/axe-devtools_nary38.png)
 
 ## Manual testing
-
+![]()
+![]()
+![]()
+![]()
+![]()
 
 | Action           | Expected Result                                                                                                                                | Pass |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------|------|

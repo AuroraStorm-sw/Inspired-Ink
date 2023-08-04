@@ -14,9 +14,9 @@
       <div class="card ink-cards m-3">
           <div class="card-body">
               <a href="{% url 'ink_detail' post.slug %}" class="card-link">
-                  <h5 class="card-title">
+                  <p class="card-title">
                       <iconify-icon icon="mdi:ink"></iconify-icon> {{ post.title }}
-                  </h5>
+                  </p>
                   <p class="card-title mb-2">A {{post.category}} by {{post.author}}</p>
                   <p class="card-subtitle mb-2">Written: {{post.created_on}}</p>
                   <p class="card-text">{{ post.excerpt }}</p>
@@ -28,7 +28,7 @@
       </div>
       {% endfor %}
   </div>
-  <a href="{% url 'home' %}" role="button" class="btn btn-cancel">Back</a>
+  <a href="{% url 'home' %}" role="button" class="btn">Back</a>
 </div>
 
 <!-- PAGINATION -->

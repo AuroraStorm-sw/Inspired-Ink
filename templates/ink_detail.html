@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}{{ post.title }}{% endblock %}
+
 {% block content %}
 
 {% load crispy_forms_tags %}
@@ -22,7 +23,7 @@
     {% if user.id == post.author.id %}
     <div class="update-btn-group">
         <a href="{% url 'update_ink' post.slug %}" class="btn" role="button">Edit</a>
-        <a href="{% url 'delete_ink' post.slug %}" class="btn btn-cancel" role="button">Delete</a>
+        <a href="{% url 'home' %}" role="button" class="btn">Delete</a>
     </div>
     {% endif %}
 
@@ -111,4 +112,4 @@
         </div>
     </div>
 </div>
-    {% endblock content %}
+{% endblock content %}
