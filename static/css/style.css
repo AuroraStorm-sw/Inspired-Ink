@@ -47,7 +47,6 @@ a {
 
 a:hover {
     color: #3a2202;
-    text-decoration: underline;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -62,6 +61,10 @@ a:hover {
     font-family: 'Inknut Antiqua', serif;
 
     margin: 5px;
+}
+
+.navbar li a:active {
+    text-decoration: underline;
 }
 
 .navbar-toggler-icon,
