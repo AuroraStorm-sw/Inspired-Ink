@@ -151,21 +151,29 @@ For paragraphs, I picked Roboto, which is a very casual font that works well tog
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691171483/signout_vbjwku.png)
 
 
-# CRUD
+# Structure
+
+## CRUD
 
 - Create: An authenticated user can create and submit an Ink post.
-
 - Read: A user can browse all the posted Inks.
-
 - Update: An authenticated user can edit their own submitted Ink posts.
-
 - Delete: An authenticated user can delete their own submitted Ink posts.
+
+## Custom model
+
+The Ink and Feedback models are both based on the [Code Institute Courseware](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/) for I Think Therefore I Blog, with modification to both the models and the visual result to better fit the project.
+
+The Comment model is a custom model not included in the courseware.
+
 
 # Testing
 
 ## Validator testing
 
 ## Code
+
+# Testing
 
 [W3 HTML checker](https://validator.w3.org)
 
@@ -256,7 +264,6 @@ Each .py file has been passed through the linter with very few errors; those com
 | Footer           | I can reach the different social medias sites via the footer, and they all open in new tabs.                                                   | Pass |
 
 
-
 # Bugs
 1. Lingering 'missing data' in category table after migrating the category model and category addition to Post without creating a category index.
 Solution: Reset the database to remove the error and recreate superuser.
@@ -270,7 +277,6 @@ Solution: Through tutor support, they found a spelling error in loading style.cs
 
 - Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was laid to the side due to deadline.
 - Add a short backstory about each writing styles' origin on the category pages.
-
 
 
 # Deployment
@@ -361,10 +367,11 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 
 
 ## Resourses
-- [Table Converter](https://tableconvert.com/) - for Manual Testing structuring
-- [Tinypng](https://tinypng.com/) - for compressing background image
-- [Coolors](https://coolors.co) - for generating a color palette
-- [Google Fonts](https://fonts.google.com) - for browsing and implementing fonts
+- [Table Converter](https://tableconvert.com/) - for Manual Testing structuring.
+- [Tinypng](https://tinypng.com/) - for compressing background image.
+- [Coolors](https://coolors.co) - for generating a color palette.
+- [Google Fonts](https://fonts.google.com) - for browsing and implementing fonts.
+- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - the template used as a base for the project.
 
 ## Images
 - [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
@@ -385,13 +392,11 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 - [Lyric part of Lie to Me by Riell](https://genius.com/Riell-lie-to-me-lyrics)
 
 ## Guiding
-- [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&index=4) - Youtube video guidance on how to add a category model and view.
+- [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&index=4) - Youtube video guidance on how to add a category model and view for the custom model.
 - [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - A playlist of Youtube videos going through all stages of building a Django blog that I used to browse through to get tips and tricks on how to structure models, views, and urls.
 - [StackOverflow](https://stackoverflow.com/) - A forum used throughout the project when searching for solutions for errors or ideas on views or how to add specific functions to the website. Throughout the project, sources have been added to each corresponding piece of code in comments.
 - [Slack](https://slack.com/) - A lot of answers to errors and frustrations have been found when browsing issues across different channels.
-- []()
-
-
+[Code Institute Courseware](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/) - Code Institute coarseware used for the basic structure of the Ink and Feedback/Comment models.
 
 # Final thoughts and credits
 
