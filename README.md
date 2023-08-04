@@ -104,32 +104,47 @@ For paragraphs, I picked Roboto, which is a very casual font that works well tog
 
     - Category
 
-    When browsing the category list, the 
+    When browsing the category list, each Ink within that category is displayed in the same way as those on the Home page, making it easy to browse between them.
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147906/img-category_swghga.png)
 
 - Account
     - Create account
 
+    The create account section is, like everything else, kept as simplistic as possible to make the process quick and easy, with a basic structure.
+
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create-account_ugtqsx.png)
 
-    - Sign in/Sign out
+    - Sign in
+
+    As with Account Creation, signing in is just as easy, offering only what's needed. 
 
     ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146742/img-sign-in_a3hyn0.png)
+    
 
+    - Sign out
+
+    When the user signs out, they'll be directed to a page asking them if they're sure to sign out, giving them the option to proceed with the sigh out or cancel, returning them to the home page.
+
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691171483/signout_vbjwku.png)
 
 # Technologies Used
+
 ## Languages
-- HTML5
-- CSS
-- Python
-- Javascript
-## Django packages
-## Frameworks/Libraries
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Django packages/Frameworks/Libraries
+
+
+
 
 ## Resourses
-- [Table Converter](https://tableconvert.com/) for Manual Testing
+- [Table Converter](https://tableconvert.com/) for Manual Testing structuring
 - [Tinypng](https://tinypng.com/) for compressing background image
+- [Coolors](https://coolors.co) for compressing background image
 
 # Credits
 
@@ -252,5 +267,46 @@ Solution: Through tutor support, they found a spelling error in loading style.cs
 
 
 # Deployment
+
+Github
+
+Steps I took to deploy my website;
+
+1. Go to the repository for Portfolio-project-3
+2. Click the Settings tab and locate the Pages tab
+3. Select to deploy from main branch
+4. A few minutes later, upon refreshing the page, my site was live
+
+For anyone wishing to Fork this repository, then do as follows;
+
+1. Log in to GitHub and find your way to the GitHub repository you want, in this case, my Inspired Ink project
+2. Up in the right corner of the repository page, on the row of buttons just beneath the user icon, you'll find the "Fork" button.
+3. Click the "Fork" button, and you will now have created a copy of the repository to your GitHub account.
+
+To clone this repository, then do as follows;
+
+1. Log in to GitHub and find your way to the GitHub repository you want, in this case, my portfolio project 3 Click the "<> Code" button in the upper right above the files
+2. Copy the link
+3. Open Gitpod and from there, select which directory you want the clone to be created into.
+4. Type in "git clone" in your Gitpod terminal and paste the link copied from GitHub, and the close will be created.
+
+Deploying the app in Heroku:
+
+This was done with the help of instructions from Code Institute, and goes as follows;
+
+To properly deploy with Heroku, I've used the Code Institute Python Essentials Template that is set up to let the code that is used in the terminal to be viewed in the browser.
+
+1. Log in to Heroku or create a new account
+2. On the main page up near the top, click "New" and select "Create new app"
+3. Pick your unique app name and select your region
+4. Click the "Create App" button
+5. On the next page, manover to the "Settings" tab and find "Config Vars"
+6. Click "Reveal Config Vars" and add "Port" to key and "8000" to value, then click "Add"
+7. Scroll down the page to "Buildpack" and click "Add", then select "Python"
+8. Repeat an add "node.js" and make sure they're in that order, with Python first
+9. Scroll back up and click the "Deploy" tab
+10. Here, you select "GitHub" as deployment method and search for your repository to link them together
+11. Scroll down the page and select if you want to "Enable Automatic Deploys" to automatically deploy your pushes from GitHub to Heroku.
+
 
 # Final thoughts
