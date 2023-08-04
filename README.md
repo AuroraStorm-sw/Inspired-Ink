@@ -26,19 +26,42 @@ For the site to reach its full potential for a user, these features are included
 # Design
 ## Colors
 ## Fonts
-![Image]()
+
 
 # Features
 - Home page
     - Navbar
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-nav_c8igfc.png)
+
+    - Intro
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146807/img-intro_cxw4kz.png)
+
+    - Inks
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146806/img-posts_yiuvph.png)
+
     - Footer
-    - Main content
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146804/img-footer_aazqge.png)
+
 - Create a new Ink
+    - Write
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create_sfsiwh.png)
+
     - Edit Ink
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147794/img-update_jxgaif.png)
+
     - Delete Ink
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146804/img-delete_j7e422.png)
+
 - Category Archive
-- Create account
-- Sign in/Sign out
+    - Category
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147906/img-category_swghga.png)
+
+- Account
+    - Create account
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create-account_ugtqsx.png)
+    - Sign in/Sign out
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146742/img-sign-in_a3hyn0.png)
+
 
 # Technologies Used
 ## Languages
@@ -52,7 +75,8 @@ For the site to reach its full potential for a user, these features are included
 # Credits
 
 ## Images
-- https://www.pexels.com/photo/empty-brown-canvas-235985/ - Background image
+- [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
+- [Quote image](https://abstract.desktopnexus.com/get/1737801/?t=146uo7bue09b2o59gjgv030rd364ccdb5086d33)
 
 ## Icons
 - https://icon-sets.iconify.design/mdi/ink/
@@ -61,13 +85,39 @@ For the site to reach its full potential for a user, these features are included
 
 ## Sources for example posts
 - [Poem by Sappho](https://ozofe.com/sappho/to-atthis-the-inconstant/)
-- https://ozofe.com/maya-angelou/on-aging/ - Poem by Maya Angelou
-- https://reedsy.com/discovery/blog/haiku-poem-examples - Haiku by Ezra Pound
-- https://www.songlyrics.com/poets-of-the-fall/war-lyrics/ - Part of the lyrics to War by Poets Of the Fall
-- https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour - The story of an Hour by Kate Chopin
-- https://genius.com/Riell-lie-to-me-lyrics - Lyric part of Lie to Me by Riell
+- [Poem by Maya Angelou](https://ozofe.com/maya-angelou/on-aging/)
+- [Heiku by Ezra Pond](https://reedsy.com/discovery/blog/haiku-poem-examples)
+- [Part of the lyrics to War by Poets Of the Fall](https://www.songlyrics.com/poets-of-the-fall/war-lyrics/)
+- [The story of an Hour by Kate Chopin](https://americanliterature.com/author/kate-chopin/short-story/the-story-of-an-hour ) 
+- [Lyric part of Lie to Me by Riell](https://genius.com/Riell-lie-to-me-lyrics) 
 
 # Testing
+
+## Validator testing
+
+
+[W3 HTML checker](https://validator.w3.org)
+
+All pages of the website has been run through W3, with two of them coming out with 
+
+![SignIn](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-login_fl1u4l.png)
+![SignOut](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-sign-out_s9dhoi.png)
+![SignUp](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-signup_bftkjh.png)
+![Home](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-home_rwd4lx.png)
+![AddInk](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-add-ink_tq3a5e.png)
+![InkView](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151150/test-detail_bbnkqd.png)
+    ![InkViewCode](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151150/test-detail-code_cevs2o.png)
+![Category](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/test-category_w6bujd.png)
+![InkDelete](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147698/text-delete_jhahvj.png)
+![InkEdit](https://res.cloudinary.com/dg4yefryk/image/upload/v1691151475/test-edit_gkajnl.png)
+
+
+
+
+
+![]()
+![]()
+
 ## Manual testing
 
 

@@ -46,7 +46,7 @@ a {
 }
 
 a:hover {
-    a:hover {color:#774605;}
+    color: #774605;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -220,7 +220,6 @@ footer a {
 
     margin-left: 20px;
 }
-
 
   /* ---------- BUTTONS ---------- */
 

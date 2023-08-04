@@ -33,11 +33,11 @@
     <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
         {% csrf_token %}
         {% if liked %}
-        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
+        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like" aria-label="like or unlike post">
             <iconify-icon icon="mdi:ink-plus"></iconify-icon>
         </button>
         {% else %}
-        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like">
+        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like" aria-label="like or unlike post">
             <iconify-icon icon="mdi:ink-plus-outline"></iconify-icon>
         </button>
         {% endif %}

@@ -5,6 +5,7 @@
 
 {% block content %}
 
+<br>
 <h2>Edit your Ink</h2>
 
 <!-- Edit posted Ink for the author who
@@ -17,15 +18,18 @@ Inks -->
         <p>Here is where you write your new ink!</p>
         <p>Be it a poem, a haiku, or a short story, it fits right here.</p>
     </div>
+</div>
 
+<div class="container add-ink">
     {% if user.id == post.author.id %}
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p | safe }}
-            <button type="submit" class="btn">Update</button>
-            <button type="button" class="btn btn-cancel"><a href="{% url 'home' %}" role="button">Cancel</a></button>
+        <button type="submit" class="btn">Update</button>
+        <a href="{% url 'home' %}" role="button" class="btn btn-cancel">Cancel</a>
     </form>
 </div>
+
 {% endif %}
 
 {% endblock %}
