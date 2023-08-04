@@ -335,15 +335,21 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 
 ## Tools
 - [JsHint](https://jshint.com/) - For validating Javascript code
-- [CI Python Linter](https://pep8ci.herokuapp.com/#) - 
-- [W3C HTML Validator](https://validator.w3.org/) - 
-- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) - 
-- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - 
-- [HTMLHint](https://htmlhint.com/) - 
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/) - 
-- [WAVE](https://wave.webaim.org/) - 
-- [Grammarly](https://app.grammarly.com/) - 
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - For validating Python code
+- [W3C HTML Validator](https://validator.w3.org/) - For validating HTML code
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) - For validating CSS code
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - Developer tool used throughout the project for bug fixing and error searching
+- [Axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) - A developer tool for validating accessability
+- [HTMLHint](https://htmlhint.com/) - Static code analysis tool for HTML
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/) - For accessability validation
+- [WAVE](https://wave.webaim.org/) - For accessability and contrast validation
+- [Grammarly](https://app.grammarly.com/) - Used to spell and grammar check the ReadMe
 
+## Libraries
+- Gunicorn - The server used for running Django on Heroku
+- pyscopg2 - Used to connect to PostgreSQL
+- Cloudinary - Used to host static files and images
+- Whitenoise - Helps sort out issues with Heroku not rendering custom CSS stylesheet
 
 ## Packages
 
@@ -359,8 +365,6 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 - [Tinypng](https://tinypng.com/) - for compressing background image
 - [Coolors](https://coolors.co) - for generating a color palette
 - [Google Fonts](https://fonts.google.com) - for browsing and implementing fonts
-
-# Credits
 
 ## Images
 - [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
@@ -383,10 +387,13 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 ## Guiding
 - [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&index=4) - Youtube video guidance on how to add a category model and view.
 - [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - A playlist of Youtube videos going through all stages of building a Django blog that I used to browse through to get tips and tricks on how to structure models, views, and urls.
-- []()
-- []()
+- [StackOverflow](https://stackoverflow.com/) - A forum used throughout the project when searching for solutions for errors or ideas on views or how to add specific functions to the website. Throughout the project, sources have been added to each corresponding piece of code in comments.
+- [Slack](https://slack.com/) - A lot of answers to errors and frustrations have been found when browsing issues across different channels.
 - []()
 
 
 
-# Final thoughts
+# Final thoughts and credits
+
+- Tutor support
+- Course friends
