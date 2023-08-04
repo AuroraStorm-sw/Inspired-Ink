@@ -46,7 +46,8 @@ a {
 }
 
 a:hover {
-    color: #774605;
+    color: #3a2202;
+    text-decoration: underline;
 }
 
 /* ---------- NAVBAR ---------- */
