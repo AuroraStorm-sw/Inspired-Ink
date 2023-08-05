@@ -124,7 +124,7 @@ class AddInkPost(CreateView):
 
     def form_valid(self, form):
         """
-        Source:
+        Source for adding alerts for successful posting:
         https://stackoverflow.com/questions/67366138
         Displays an alert that the Ink has
         been successfully posted
@@ -145,7 +145,7 @@ class UpdateInkView(UpdateView):
 
     def form_valid(self, form):
         """
-        Source:
+        Source for adding alerts for successful editing:
         https://stackoverflow.com/questions/67366138
         Displays an alert that the Ink has
         been successfully edited
@@ -165,7 +165,7 @@ class DeleteInkView(DeleteView):
 
     def delete(self, request, *args, **kwargs):
         """
-        Source:
+        Source for adding alerts for successful deleting:
         https://stackoverflow.com/questions/24822509
         Displays an alert that the Ink has
         been successfully deleted

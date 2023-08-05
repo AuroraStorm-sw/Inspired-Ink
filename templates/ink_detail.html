@@ -71,7 +71,7 @@
                 </p>
                 {{ comment.body | linebreaks }}
                 <hr>
-                <!---Source:
+                <!---Source for adding text to container if it's empty:
                 https://stackoverflow.com/questions/17435233-->
                 {% empty %}
                 {% if user.is_authenticated %}

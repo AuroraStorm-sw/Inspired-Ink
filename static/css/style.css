@@ -142,14 +142,14 @@ https://stackoverflow.com/questions/7241341
 }
 
 textarea {
-    /*Source:
+    /*Source for removing resizing:
     https://stackoverflow.com/questions/5235142/
      */
     resize: none;
 }
 
 label {
-    /*Source:
+    /*Source for aligning labels and inputs:
     https://www.w3docs.com/snippets/html/how-to-align-labels-next-to-inputs.html;*/
     display: inline-block;
     width: 12rem;
@@ -182,7 +182,7 @@ form p {
     padding: 12px;
     border-radius: 4px;
     box-sizing: border-box;
-      /*Source:
+      /*Source for removing resizing:
       https://stackoverflow.com/questions/5235142/
       */
      resize: none;

@@ -127,7 +127,7 @@ DATABASES = {
 
 
 """
-noqa source:
+Source for noqa comment:
 https://stackoverflow.com/questions/45346575
 """
 
