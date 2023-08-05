@@ -60,9 +60,9 @@ Inspired Ink aims to provide writers from all skill levels with a place to expre
 Writing doesn't have to be complicated or up to a certain standard, which I want to offer with Inspired Ink, a basic, age-less, relaxed place to write down whatever creative blurb floating around your head and categorize it the best you can.
 
 # Agile and User Stories
-The baseline of my User Stories is collected in an Excel file that I then transferred into a GitHub Project that uses an agile approach. See [Here](https://github.com/users/AuroraStorm-sw/projects/7) for the full project.
+The baseline of my User Stories is collected in an Excel file that I then transferred into a GitHub Project that uses an agile approach with the help of a Kanban board method. This made it easy to visuallize and handle all user stories one at a time and add all details to each story to be set in one place. See [Here](https://github.com/users/AuroraStorm-sw/projects/7) for the full project.
 
-Each User Story comprises an Epic, Acceptance criteria, and several tasks; each User Story is tagged with either "must have" and/or "nice to have". I collected all "must have" and "nice to have" tasks in the same User Story to keep it nice and neat.
+Each User Story comprises an Epic, Acceptance criteria, and several tasks; each User Story is tagged accordingly. I collected all "must have" and "nice to have" tasks in the same User Story to keep it nice and neat.
 To view all User Stories, please see the above link.
 
 # Wireframes
@@ -201,7 +201,7 @@ For paragraphs, I picked Roboto, a very casual font that works well with Inkut t
 
 ## Custom model
 
-The Ink and Feedback models are both based on the [Code Institute Courseware](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/) for I Think Therefore I Blog, with modification to both the models and the visual result to better fit the project.
+The Ink and Feedback models are both based on the [Code Institute Courseware](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/) walkthrough for I Think Therefore I Blog, with modification to both the models and the visual result to better fit the project.
 
 The Comment model is a custom model not included in the courseware.
 
@@ -213,7 +213,7 @@ The Comment model is a custom model not included in the courseware.
 
 [W3 HTML checker](https://validator.w3.org)
 
-All website pages have been run through W3, with two coming out with seemingly false positive results.
+All website pages have been run through W3, with two coming out with seemingly false positive results. These two were the "Edit Ink" and "View Ink", and has been documented as a separate issue along side the debugging and re-validating, please see below.
 
 ## No errors
 
@@ -302,11 +302,15 @@ Each .py file has been passed through the linter with very few errors; those com
 ## Responsiveness
 
 The deployed app has been tested across these web browsers with full responsiveness:
-    - Firefox
-    - Google Chrome
-    - Microsoft Edge
+- Firefox
+- Google Chrome
+- Microsoft Edge
 
-When creating an account on Opera web browser, the user got a "Forbidden" error screen, but was still able to use the website while signed in after returning to the previous page. Upon browsing for solutions online, non came up related to the Opera browser
+It has also been tested on Samsung mobile in physical form, and various viewports with the help of developer tools in the browser.
+
+When creating an account on Opera web browser, the user got a "Forbidden" error screen, but was still able to use the website as signed in after returning to the previous page. Upon searching for solutions online, non came up related to the Opera browser.
+
+![OperaError](https://res.cloudinary.com/dg4yefryk/image/upload/v1691245409/403-opera_e5eiq7.png)
 
 
 # Bugs
@@ -321,6 +325,9 @@ Solution: Wrap the section around an extra top div so the button doesn't get its
 
 4. After changing DEBUG from True to False, sometimes needs to change name of style.css file for the new styling to get added to the website, even after hard refreshing the webpage.
 Solution: Still debugging at time of project submission, no solution discovered in time.
+
+5. Account creation not fully functional on Opera Web browser, causing an 403 Forbidden error message.
+Solution: No information about this specific error has come up when searching for information online. The signup form comes with a csrf token. Unclear if the error is caused by the webpage itself or by Allauth.
 
 
 # Future implements - nice to haves
