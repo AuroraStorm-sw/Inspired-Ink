@@ -112,8 +112,13 @@
         </div>
     </div>
 </div>
-
-<div class="col text-center"><a href="{% url 'home' %}" role="button" class="btn">Back</a></div>
-<br>
+ <!--
+    Source for button centering:
+    https://stackoverflow.com/questions/41664991
+    Source for previous page button:
+    https://stackoverflow.com/questions/2968425/
+  -->
+  <div class="col text-center"><button class="btn" type="button" onclick="history.back();">Back</button></div>
+  <br>
 
 {% endblock content %}
