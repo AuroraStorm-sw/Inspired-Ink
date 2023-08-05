@@ -312,6 +312,7 @@ When creating an account on Opera web browser, the user got a "Forbidden" error 
 
 ![OperaError](https://res.cloudinary.com/dg4yefryk/image/upload/v1691245409/403-opera_e5eiq7.png)
 
+[AmIResponsive](https://ui.dev/amiresponsive) was used as a guideline to see responsiveness across different viewports.
 
 # Bugs
 1. Lingering 'missing data' in the category table after migrating the category model and category addition to Post without creating a category index.
@@ -426,10 +427,11 @@ The instructions below are for the basic Heroku app setup. For specific Django s
 # Resourses
 
 ## Assisting
-- [Table Converter](https://tableconvert.com/) - for Manual Testing structuring.
-- [Tinypng](https://tinypng.com/) - for compressing background image.
-- [Coolors](https://coolors.co) - for generating a color palette.
-- [Google Fonts](https://fonts.google.com) - for browsing and implementing fonts.
+- [Table Converter](https://tableconvert.com/) - For Manual Testing structuring.
+- [Tinypng](https://tinypng.com/) - For compressing background image.
+- [Coolors](https://coolors.co) - For generating a color palette.
+- [Google Fonts](https://fonts.google.com) - For browsing and implementing fonts.
+- [AmIResponsive](https://ui.dev/amiresponsive) - For checking responsiveness across several viewports.
 
 ## Images
 - [Background image](https://www.pexels.com/photo/empty-brown-canvas-235985/)
