@@ -24,6 +24,7 @@ With many forums for writing singling out a specific kind of creative writing, s
     - [Errors](#errors)
         - [Accessability](#accessability)
     - [Manual testing](#manual-testing)
+    - [Responsiveness](#responsiveness)
 - [Bugs](#bugs)
 - [Future implements - nice to have](#future-implements---nice-to-haves)
 - [Deployment](#deployment)
@@ -39,6 +40,7 @@ With many forums for writing singling out a specific kind of creative writing, s
     - [Icons](#icons)
     - [Sources for example posts](#sources-for-example-posts)
     - [Credits](#credits)
+
 
 # Introduction
 
@@ -295,6 +297,14 @@ Each .py file has been passed through the linter with very few errors; those com
 | Links            | All of the links throughout the page are fully functional                                                                                      | Pass |
 | Buttons          | All of the buttons direct me to their designated function                                                                                      | Pass |
 | Footer           | I can reach the different social medias sites via the footer, and they all open in new tabs.                                                   | Pass |
+
+
+## Responsiveness
+
+The deployed app has been tested across these web browsers with full responsiveness:
+    - Firefox
+    - Google Chrome
+    - Microsoft Edge
 
 
 # Bugs

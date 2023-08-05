@@ -130,7 +130,7 @@ https://stackoverflow.com/questions/7241341
 }
 
 .icon {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /* ---------- FORM STYLING ---------- */
@@ -188,7 +188,6 @@ form p {
      resize: none;
 }
 
-
 #id_excerpt {
     max-height: 10rem;
 }
@@ -242,7 +241,7 @@ footer a {
 }
 
 .btn-like {
-    font-size: 3.2rem;
+    font-size: 2rem;
     
     background: none;
     border: none;

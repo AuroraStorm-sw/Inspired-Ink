@@ -5,7 +5,12 @@
 
 {% load crispy_forms_tags %}
 
-<!-- DISPLAY INK POST -->
+<!--
+    Template for the layout of when
+    a user views a full Ink post
+-->
+
+<!-- VIEW INK POST -->
 
 <div class="card-wrapper offset-md-2">
     <div class="card border-secondary mb-3">
@@ -34,22 +39,24 @@
     <form class="d-inline" action="{% url 'inkpost_like' post.slug %}" method="POST">
         {% csrf_token %}
         {% if liked %}
-        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like" aria-label="like or unlike post">
+        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like"
+            aria-label="like or unlike post">
             <iconify-icon icon="mdi:ink-plus"></iconify-icon>
         </button>
         {% else %}
-        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like" aria-label="like or unlike post">
+        <button type="submit" name="inkpost_id" value="{{ post.slug }}" class="btn-like"
+            aria-label="like or unlike post">
             <iconify-icon icon="mdi:ink-plus-outline"></iconify-icon>
         </button>
         {% endif %}
     </form>
     {% else %}
-    <iconify-icon icon="mdi:ink" class="aicon"></iconify-icon>
+    <iconify-icon icon="mdi:ink" class="icon"></iconify-icon>
     {% endif %}
     <span class="number-of-likes">{{ post.number_of_likes }}</span>
 
     {% with comments.count as total_comments %}
-    <iconify-icon icon="material-symbols:comment" class="aicon"></iconify-icon> {{ total_comments }}
+    <iconify-icon icon="material-symbols:comment" class="icon"></iconify-icon> {{ total_comments }}
     {% endwith %}
 </div>
 
@@ -92,33 +99,35 @@
     </div>
 
     <!-- LEAVE COMMENT FOR AUTHENTICATED USERS -->
-
-    <div class="row comment-wrap">
-        {% if user.is_authenticated %}
-        <div class="card col m-4">
-            <div class="card-title">
-                <h3>Leave feedback:</h3>
-            </div>
-            <div class="card-body">
-                <p>Comment as: {{ user.username }}</p>
-                <form method="post">
-                    {{ feedback_form | crispy }}
-                    {% csrf_token %}
-                    <br>
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
+    <div>
+        <div class="row comment-wrap">
+            {% if user.is_authenticated %}
+            <div class="card col m-4">
+                <div class="card-title">
+                    <h3>Leave feedback:</h3>
+                </div>
+                <div class="card-body">
+                    <p>Comment as: {{ user.username }}</p>
+                    <form method="post">
+                        {{ feedback_form | crispy }}
+                        {% csrf_token %}
+                        <br>
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                    {% endif %}
+                </div>
             </div>
         </div>
-    </div>
-</div>
- <!--
+        <!--
     Source for button centering:
     https://stackoverflow.com/questions/41664991
     Source for previous page button:
     https://stackoverflow.com/questions/2968425/
   -->
-  <div class="col text-center"><button class="btn" type="button" onclick="history.back();">Back</button></div>
-  <br>
+        <div class="col text-center"><button class="btn" type="button" onclick="history.back();">Back</button></div>
+        <br>
+    </div>
+</div>
+
 
 {% endblock content %}

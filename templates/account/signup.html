@@ -23,6 +23,7 @@
     </div>
   </div>
   <br>
+  
   <div class="row">
     <div class="col-md-8 offset-md-3">
       <form class="signup form-group" id="signup_form" method="post" action="{% url 'account_signup' %}">
@@ -31,14 +32,13 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
+        <br>
         <button type="submit" class="btn">{% trans "Sign Up" %} &raquo;</button>
       </form>
       <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+      <br>
     </div>
   </div>
 </div>
-
-
-
 
 {% endblock %}
