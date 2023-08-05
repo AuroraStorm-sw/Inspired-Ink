@@ -300,6 +300,8 @@ The deployed app has been tested across these web browsers with full responsiven
     - Google Chrome
     - Microsoft Edge
 
+When creating an account on Opera web browser, the user got a "Forbidden" error screen, but was still able to use the website while signed in after returning to the previous page. Upon browsing for solutions online, non came up related to the Opera browser
+
 
 # Bugs
 1. Lingering 'missing data' in the category table after migrating the category model and category addition to Post without creating a category index.
@@ -311,7 +313,7 @@ Solution: Through tutor support, they found a spelling error in loading style.cs
 3. "Back" button on view_ink.html shows up on a white, separate line when a user isn't signed in.
 Solution: Wrap the section around an extra top div so the button doesn't get its own line when the feedback section isn't visible to unauthorized users.
 
-4. After changing DEBUG from True to False, needs to change name of style.css file for the new styling to get added to the website, even after hard refreshing the webpage.
+4. After changing DEBUG from True to False, sometimes needs to change name of style.css file for the new styling to get added to the website, even after hard refreshing the webpage.
 Solution: Still debugging at time of project submission, no solution discovered in time.
 
 

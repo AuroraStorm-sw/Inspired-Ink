@@ -123,6 +123,11 @@ class AddInkPost(CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
+
+        post = form.save(commit=False)
+        post.author = self.request.user
+        post.save()
+
         """
         Source for adding alerts for successful posting:
         https://stackoverflow.com/questions/67366138
