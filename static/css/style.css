@@ -15,7 +15,7 @@ body {
 .background-img {
     min-height: 100vh;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1691074493/parchment-compressed_-_Copy_nslm6c.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("https://res.cloudinary.com/dg4yefryk/image/upload/v1691236664/parchment-bg.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
