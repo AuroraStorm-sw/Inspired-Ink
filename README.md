@@ -456,15 +456,22 @@ Any Ink not included in the list is written by me or website users.
 # Credits
 
 - [Very Academy](https://www.youtube.com/watch?v=S9-Bt1JgRjQ&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&index=4) - Youtube video guidance on how to add a category model and view for the custom model.
+
 - [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) - A playlist of Youtube videos going through all stages of building a Django blog that I used to browse through to get tips and tricks on how to structure models, views, and URLs.
+
 - [StackOverflow](https://stackoverflow.com/) - A forum used throughout the project when searching for solutions for errors or ideas on views or how to add specific functions to the website. Throughout the project, sources have been added to each corresponding piece of code in comments.
-- [Slack](https://slack.com/) - Many answers to errors and frustrations have been found when browsing issues across different channels.
+
+- [Slack](https://slack.com/) - Many answers to errors and frustrations have been found when browsing issues across different channels. Throughout the project, sources have been added to each corresponding piece of code in comments.
+
 - [Code Institute Courseware](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/) - Code Institute courseware used for the basic structure of the Ink and Feedback/Comment models.
+
 - [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) - the template used as a base for the project.
+
+- [Kathrin's Haiku blog](https://github.com/Kathrin-ddggxh/woohoo-haiku) - For the shape and Bootstrap template of the Ink cards on the Home and Category page, including the 'hover transformation' effect.
 
 - Code Institutes Tutor Support where amazing in helping me sort out some mind-boggling issues, like why my static files weren't loading on Heroku and when I had to reset my database, and they did so with such patience and clear guidance.
 Many thanks to Sarah, Rebecca, Martin, Ed, and Joshua for code reparing, typo-hunting, and for their support throughout this journey. I would not have any hair left on my head if it weren't for them helping me with these frustrating issues.
 
-- Fellow coders on Slack were of great help in pointing me in the right direction when I felt lost or when the result of my code didn't make any sense.
+- Fellow coders on Slack were of great help in pointing me in the right direction when I felt lost or when the result of my code didn't make any sense. The outline of the ReadMe has been inspired by different Portfolio 4 projects in the peer-per-view channel, as well as my own previous projects.
 
 - My amazing flatmate Erik, who helped me with a fresh pair of eyes when I couldn't find errors across the code and also supplied me with snacks to help me keep my sanity throughout the project.
