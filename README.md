@@ -330,6 +330,9 @@ Solution: Still debugging at time of project submission, no solution discovered 
 5. Account creation not fully functional on Opera Web browser, causing an 403 Forbidden error message.
 Solution: No information about this specific error has come up when searching for information online. The signup form comes with a csrf token. Unclear if the error is caused by the webpage itself or by Allauth.
 
+6. The text "Body*" showing next to the main textcontent input when creating an Ink. The text was included in the form, and I wasn't able to remove it.
+Solution: Hiding the text with CSS, using font-size: 0 on that specific field.
+
 
 # Future implements - nice to haves
 
