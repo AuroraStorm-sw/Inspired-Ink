@@ -312,6 +312,7 @@ Solution: Through tutor support, they found a spelling error in loading style.cs
 3. "Back" button on view_ink.html shows up on a white, separate line when a user isn't signed in.
 Solution: Wrap the section around an extra top div so the button doesn't get its own line when the feedback section isn't visible to unauthorized users.
 
+
 # Future implements - nice to haves
 
 - Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was put to the side due to the deadline.
