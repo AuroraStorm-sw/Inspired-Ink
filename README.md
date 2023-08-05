@@ -1,3 +1,8 @@
+![AmIResponsive](https://res.cloudinary.com/dg4yefryk/image/upload/v1691243660/responsive_vwenph.png)
+
+See live site [here](https://inspired-ink-3acb52d766db.herokuapp.com/).
+
+
 
 # Why Inspired Ink?
 The thought behind Inspired Ink is to invite creative minds with an itch to express themselves in writing to get those ideas down on 'paper', so to speak, while also providing the opportunity to enjoy fellow writers' work and leave comments or feedback.
@@ -62,7 +67,7 @@ To view all User Stories, please see the above link.
 
 # Wireframes
 
-I began with very little inspiration for the layout of the webpage, knowing only what it should look like when viewing an Ink and that the home page should have an introductory part followed by posts.
+I began with very little inspiration for the layout of the webpage, knowing only what it should look like when viewing an Ink and that the home page should have an introductory part followed by posts. Throughout the project, ideas have come organically, and has been added onto a long the way. For instance, the idea of having a quite on the home page came from spotting a Bootstrap template for quotes.
 
 Throughout the project, and from browsing the internet for different examples of poetry and creative writing websites, I settled for something uncomplicated, seeing the cluttered examples in the wild. I want the focus to be on the submitted writing works and nothing more.
 
@@ -93,7 +98,7 @@ I based the colors around the background image and used [Coolors](https://coolor
 
 ![Palette](https://res.cloudinary.com/dg4yefryk/image/upload/v1691166288/palette_e1c8em.png)
 
-From this palette, I focused on the colors #3a2202 and #b96e46 and a few details of #774605. With black text on top of these reddish brown colors pops enough to make the font visible, but without removing the calm vibes.
+From this palette, I focused on the colors #3a2202 and #b96e46 and a few details of #774605. The black text on top of these reddish brown colors pops enough to make the font visible, but without removing the calm vibes.
 
 ## Fonts
 
@@ -106,6 +111,7 @@ For paragraphs, I picked Roboto, a very casual font that works well with Inkut t
 ![Roboto](https://res.cloudinary.com/dg4yefryk/image/upload/v1691167044/font-roboto_dfxcrd.png)
 
 # Features
+
 - Home page
     - Navbar
 
@@ -141,7 +147,7 @@ For paragraphs, I picked Roboto, a very casual font that works well with Inkut t
 
     The layout for the form to write an Ink is kept very simplistic, as creating an Ink shouldn't feel like rocket science. It consists of an author input, category, title, an excerpt if the user feels like adding one, and the main content. Below are two buttons, one for submitting the Ink and one for canceling, which returns the user to the home page.
 
-    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691146805/img-create_sfsiwh.png)
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691244017/img-create_mbuptm.png)
 
     - Edit Ink
 
@@ -161,7 +167,7 @@ For paragraphs, I picked Roboto, a very casual font that works well with Inkut t
 
     When browsing the category list, each Ink within that category is displayed similarly to those on the Home page, making it easy to browse between them.
 
-    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691147906/img-category_swghga.png)
+    ![Image](https://res.cloudinary.com/dg4yefryk/image/upload/v1691244267/img-category_s8mglj.png)
 
 - Account
     - Create account
@@ -321,7 +327,8 @@ Solution: Still debugging at time of project submission, no solution discovered 
 
 - Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was put to the side due to the deadline.
 - Add a short backstory about each writing style's origin on the category pages.
-- Add function for user to view all their own Inks and others' Inks
+- Add function for user to view all their own Inks and others' Inks by clicking on their username
+- Change so that users can't like their own Inks
 
 # Deployment
 
