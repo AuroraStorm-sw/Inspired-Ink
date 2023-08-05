@@ -263,7 +263,6 @@ Each .py file has been passed through the linter with very few errors; those com
 ### Accessibility
 
 ## [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
-
 ![Lighthouse](https://res.cloudinary.com/dg4yefryk/image/upload/v1691159942/lighthouse_eipqg2.png)
 
 ## [Axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
@@ -317,6 +316,7 @@ Solution: Wrap the section around an extra top div so the button doesn't get its
 
 - Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was put to the side due to the deadline.
 - Add a short backstory about each writing style's origin on the category pages.
+- Add function for user to view all their own Inks and others' Inks
 
 # Deployment
 
