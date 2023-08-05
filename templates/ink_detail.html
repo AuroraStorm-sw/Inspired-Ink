@@ -44,12 +44,12 @@
         {% endif %}
     </form>
     {% else %}
-    <iconify-icon icon="mdi:ink"></iconify-icon>
+    <iconify-icon icon="mdi:ink" class="aicon"></iconify-icon>
     {% endif %}
     <span class="number-of-likes">{{ post.number_of_likes }}</span>
 
     {% with comments.count as total_comments %}
-    <iconify-icon icon="material-symbols:comment" class="comment-icon"></iconify-icon> {{ total_comments }}
+    <iconify-icon icon="material-symbols:comment" class="aicon"></iconify-icon> {{ total_comments }}
     {% endwith %}
 </div>
 

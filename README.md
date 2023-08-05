@@ -412,6 +412,7 @@ To properly deploy with Heroku, I've used the Code Institute Python Essentials T
 - https://icon-sets.iconify.design/mdi/ink/
 - https://icon-sets.iconify.design/mdi/ink-plus/
 - https://icon-sets.iconify.design/mdi/ink-plus-outline/
+- https://icon-sets.iconify.design/material-symbols/comment/
 
 ## Sources for example posts
 - [Poem by Sappho](https://ozofe.com/sappho/to-atthis-the-inconstant/)
