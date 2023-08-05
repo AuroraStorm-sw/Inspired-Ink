@@ -315,7 +315,6 @@ Solution: Wrap the section around an extra top div so the button doesn't get its
 Solution: Still debugging at time of project submission, no solution discovered in time.
 
 
-
 # Future implements - nice to haves
 
 - Add a word counter to the Ink posts so users can see how long the posts are in the post overview. This idea was put to the side due to the deadline.
